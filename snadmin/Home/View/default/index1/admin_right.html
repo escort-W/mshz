@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/sncss/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">表单</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    <div class="formtitle"><span>权限信息</span></div>
+      <form id="form1" name="form1" method="post" action="/admin.php/Home/Index/admin_right">
+    <li><label>管理员名称</label>&nbsp;&nbsp;&nbsp;&nbsp;<input name="MB_username" type="text" class="dfinput" /><i></i></li>
+    <ul class="forminfo">
+	<li><label>权限</label>
+	<cite>
+	<input name="right[]" type="checkbox" value="main" checked="checked" />首页
+    <input name="right[]" type="checkbox" value="left" checked="checked"/>菜单栏
+    <input name="right[]" type="checkbox" value="top"  checked="checked"/>页头
+    <input name="right[]" type="checkbox" value="df1"  checked="checked"/>主页面
+	<input name="right[]" type="checkbox" value="userlist" />查看会员
+    <input name="right[]" type="checkbox" value="loginadmin" />登录会员
+    <input name="right[]" type="checkbox" value="user_xg" />修改会员
+    <input name="right[]" type="checkbox" value="user_del" />删除会员
+    <input name="right[]" type="checkbox" value="usermb" />重置密保
+
+    <input name="right[]" type="checkbox" value="counts"  />查看账单
+    <input name="right[]" type="checkbox" value="jbzs" />金币赠送
+    <input name="right[]" type="checkbox" value="weihu"  />扣除维护费
+    <input name="right[]" type="checkbox" value="team" />会员关系图
+    <input name="right[]" type="checkbox" value="zsbyg_list"  />新闻
+    <input name="right[]" type="checkbox" value="zsbyg_list_xg" />添加新闻
+    <input name="right[]" type="checkbox" value="ly_list"  />留言
+    
+    <input name="right[]" type="checkbox" value="tgbz_list"  />提供帮助
+    <input name="right[]" type="checkbox" value="jsbz_list" />接受帮助
+    <input name="right[]" type="checkbox" value="ppdd_list"  />订单列表
+    <input name="right[]" type="checkbox" value="tgbz_list_cf" />提供拆分
+    <input name="right[]" type="checkbox" value="jsbz_list_cf"  />接受拆分
+    <input name="right[]" type="checkbox" value="settings" />分成管理
+    <input name="right[]" type="checkbox" value="font_mess" />前台显示
+    <input name="right[]" type="checkbox" value="my_initialize"  />初始化
+    <input name="right[]" type="checkbox" value="index" />数据备份
+<input name="right[]" type="checkbox" value="usercl" />会员修改提交
+<input name="right[]" type="checkbox" value="jbzscl" />金币赠送提交
+<input name="right[]" type="checkbox" value="delwh" />扣除维护费提交
+<input name="right[]" type="checkbox" value="zsbyg_list_xg2" />修改新闻
+<input name="right[]" type="checkbox" value="jbzg_list_xgcl2" />修改新闻提交
+<input name="right[]" type="checkbox" value="zsbyg_list_del" />删除新闻
+<input name="right[]" type="checkbox" value="jbzg_list_xgcl1" />添加新闻提交
+
+<input name="right[]" type="checkbox" value="ppdd_list_del" />删除已交易订单
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="right[]" type="checkbox" value="settings" />设置分成管理
+
+
+
+
+
+
+
+
+
+
+	</cite>
+	
+	</li>
+    <!--<li><label>密碼</label><input name="MB_userpwd" type="text" class="dfinput" /><i></i></li>-->
+    <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
+    </ul>
+     </form>
+    
+    </div>
+
+
+</body>
+
+</html>

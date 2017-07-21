@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>
+			无标题文档
+		</title>
+		<link href="/sncss/css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="place">
+			<span>
+				位置：
+			</span>
+			<ul class="placeul">
+				<li>
+					<a href="#">
+						首页
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						表单
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="formbody">
+			<div class="formtitle">
+				<span>
+					分成设置
+				</span>
+			</div>
+			<form id="form1" name="form1" method="post" action="/admin.php/Home/Index/settings">
+				<input name="UE_account" type="hidden" class="dfinput" value="{$userdata['ue_account']}"
+				/>
+				<ul class="forminfo">
+					<i>
+					</i>
+					
+                      <li>
+						<label>
+							是否烧伤
+						</label>
+						<if condition="$shaoshang eq 1">
+							<input type="radio" checked="checked" name="shaoshang" id="shaoshang" value="1"/>
+							开启
+							<input type="radio" name="shaoshang" id="shaoshang" value="0"/>关闭
+							<else />
+							<input type="radio" name="shaoshang" id="shaoshang" value="1"/>开启
+							<input type="radio" checked="checked" name="shaoshang" id="shaoshang" value="0"/>
+							关闭
+						</if>
+						<i>
+						</i>
+					</li>
+					 <li>
+						<label>
+							最多接受帮助
+						</label>
+						<input name="apply_money_upper_limit" type="text" id="supply_money_upper_limit"
+						class="dfinput" required="true" value="{$apply_money_upper_limit}" />
+						元
+						<i>
+						</i>
+					</li>
+					<li>
+						<label>
+							最少接受帮助
+						</label>
+						<input name="apply_money_lower_limit" type="text" id="supply_money_lower_limit"
+						class="dfinput" required="true" value="{$apply_money_lower_limit}" />
+						元
+						<i>
+						</i>
+					</li> 
+
+					<h3>静态利息设置</h3>
+					<li>
+						<label>
+							1000-3000
+						</label>
+						<input type="text" value="{$jt_li1}" id="lixi1"
+							   class="dfinput" name="jt_li1" required="">%
+					</li>
+					<li>
+						<label>
+							3000-10000
+						</label>
+						<input type="text" value="{$jt_li2}" id="lixi2"
+							   class="dfinput" name="jt_li2" required="">%
+					</li>
+					<li>
+						<label>
+							10000-50000
+						</label>
+						<input type="text" value="{$jt_li3}" id="lixi3"
+							   class="dfinput" name="jt_li3" required="">%
+					</li>
+				<h3>团队奖</h3>
+					<li>
+						<label>
+							一代
+						</label>
+						<input type="text" value="{$td_j1}" id="lixi3"
+							   class="dfinput" name="td_j1" required="">%
+					</li>
+					<li>
+						<label>
+							二代
+						</label>
+						<input type="text" value="{$td_j2}" id="lixi3"
+							   class="dfinput" name="td_j2" required="">%
+					</li>
+					<li>
+						<label>
+							三代
+						</label>
+						<input type="text" value="{$td_j3}" id="lixi3"
+							   class="dfinput" name="td_j3" required="">%
+					</li>
+					<li>
+						<label>
+							四代
+						</label>
+						<input type="text" value="{$td_j4}" id="lixi3"
+							   class="dfinput" name="td_j4" required="">%
+					</li>
+					<h3>推荐奖</h3>
+					<li>
+						<label>
+							推荐一人
+						</label>
+						<input type="text" value="{$tjj}" id="lixi3"
+							   class="dfinput" name="tjj" required="">元
+					</li>
+					<h3>静态钱包</h3>
+					<li>
+						<label>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+						</label>
+						<input type="text" value="{$jt_qb}" id="lixi3"
+							   class="dfinput" name="jt_qb" required="">元起提
+					</li>
+						<li>
+						<label>
+							必须是
+						</label>
+						<input type="text" value="{$jt_qb_bs}" id="lixi3"
+							   class="dfinput" name="jt_qb_bs" required="">的倍数
+					</li>
+						<h3>动态钱包</h3>
+					<li>
+						<label>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+						</label>
+						<input type="text" value="{$dt_qb}" id="lixi3"
+							   class="dfinput" name="dt_qb" required="">元起提
+					</li>
+						<li>
+						<label>
+							必须是
+						</label>
+						<input type="text" value="{$dt_qb_bs}" id="lixi3"
+							   class="dfinput" name="dt_qb_bs" required="">的倍数
+					</li>
+					</li>
+						<h3>排单币</h3>
+					<li>
+						<label>
+							10000以下
+						</label>
+						<input type="text" value="{$pdb1}" id="lixi3"
+							   class="dfinput" name="pdb1" required="">个
+					</li>
+						<li>
+						<label>
+							10000-30000
+						</label>
+						<input type="text" value="{$pdb2}" id="lixi3"
+							   class="dfinput" name="pdb2" required="">个
+					</li>
+					<li>
+						<label>
+							30000-50000
+						</label>
+						<input type="text" value="{$pdb3}" id="lixi3"
+							   class="dfinput" name="pdb3" required="">个
+					</li>
+
+					<li>
+						<label>
+							&nbsp;
+						</label>
+                        
+
+						<input name="" type="submit" class="btn" value="确认保存" />
+					</li>
+				</ul>
+			</form>
+			<style>
+				.pages a,.pages span { display:inline-block; padding:2px 5px; margin:0
+				1px; border:1px solid #f0f0f0; -webkit-border-radius:3px; -moz-border-radius:3px;
+				border-radius:3px; } .pages a,.pages li { display:inline-block; list-style:
+				none; text-decoration:none; color:#58A0D3; } .pages a.first,.pages a.prev,.pages
+				a.next,.pages a.end{ margin:0; } .pages a:hover{ border-color:#50A8E6;
+				} .pages span.current{ background:#50A8E6; color:#FFF; font-weight:700;
+				border-color:#50A8E6; }
+			</style>
+			<div class="pages">
+				<br />
+				<div align="right">
+					{$page}
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
