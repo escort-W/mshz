@@ -1,0 +1,245 @@
+
+<style>
+li{list-style-type:none;}
+a{color:#999;}
+.background{padding:0 16px; border-radius:6px;width:166px;background-color:#1763a0;
+
+    /*FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#b8c4cb,endColorStr= #4898df); !*IE 6 7 8*!*/
+
+    /*background: -ms-linear-gradient(top, #fff, #4898df);        !* IE 10 *!*/
+
+    /*background:-moz-linear-gradient(top,#b8c4cb, #4898df);!*火狐*!*/
+
+    /*background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#b8c4cb), to(#4898df));!*谷歌*!*/
+
+    /*background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#4898df));      !* Safari 4-5, Chrome 1-9*!*/
+
+    /*background: -webkit-linear-gradient(top, #fff, #4898df);   !*Safari5.1 Chrome 10+*!*/
+
+    /*background: -o-linear-gradient(top, #fff, #4898df);  !*Opera 11.10+*!*/
+
+ }
+ body{background:#fffdec}
+.profile-picture{position:relative;}
+.stats-label text-color{color:#FFF;}
+
+html,body{background:#d7ebfe!important}
+    #wrapper{background-color: white !important;}
+
+
+body{width: 1440px !important;margin: 0 auto;}
+#wrapper{width: 1230px;float:left;}
+.profile-picture{position:relative;}
+.stats-label text-color{color:#FFF;}
+
+.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-9,.col-lg-6{float: left}
+.col-md-3{width:25% }
+.col-md-4{width:30% }
+.col-md-5{width:50% }
+.col-md-6{width:50% }
+.col-md-7{width:50% }
+.col-md-9{width:75% }
+.col-lg-6{width:30% }
+
+.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-9{float: left}
+.col-sm-3{width:25% }
+.col-sm-4{width:30% }
+.col-sm-5{width:50% }
+.col-sm-6{width:50% }
+.col-sm-7{width:50% }
+.col-sm-9{width:75% }
+
+
+
+
+
+</style>
+<script type="text/javascript">
+	$(function(){
+		var height = $(document).height();
+		var height1 = $('#logo').height();
+		$('.profile-picture').height(height);
+		$('.content').height(height+height1+20);
+	});
+
+</script>
+
+
+<aside id="menu" style="background:#d7ebfe;height:1500px; z-index:10">
+ <div id="logo" class="light-version" style="border:0 solid red;display: block">
+     <span name="search"><img src="/img/logos.png" width="100%" ></span>
+ </div>
+    <div id="navigation" style="margin-top: 152px">
+        <div class="profile-picture">
+           
+				
+            <!--<div class="stats-label text-color">-->
+                <!--<h4 class="font-extra-bold m-b-xs" style="color: white">-->
+                  <!--&lt;!&ndash; <if condition="$userData.sfjl eq 0">-->
+				   <!--普通会员-->
+				   <!--<else/>-->
+				   <!--高级经理-->
+				   <!--</if> &ndash;&gt;-->
+                <!--</h4><br>-->
+              <h5 class="font-extra-bold m-b-xs" style="color: red">账号:{$userData['ue_account']}</h5><br>
+                <h5 class="font-extra-bold m-b-xs" style="color: red">排单币:{$userData['ue_pdb']} CNY</h5><br>
+               <h5 class="font-extra-bold m-b-xs" style="color: red">推荐人:{$userData['ue_accname']}</h5><br>
+                <h4 class="font-extra-bold m-b-xs" style="margin-top:-10px;color: red">激活码：{$pin_zs}</h4>
+           
+           <div class="textBox_Box" style="font-size:16px;font-family:'微软雅黑';width:199px;margin-left:-56px;margin-top:26px;">
+                   <ul>
+                   <div class="background">
+                   		 <a href="/" style="color:white;line-height:36px;width:99px;padding:0 16px;border-radius:6px; text-align:center;width:199px;">我的首页</a><br />
+                   </div>
+                   </ul>
+                   
+                   <ul>
+                   <div class="background">
+                   		 <a href="/Home/Index/reg/" style="color:white;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">注册会员</a><br />
+                   </div>
+
+                   </ul>
+                   </ul>
+                   <!--<?php $toggleshop = M('system')->where(['SYS_ID'=>'1'])->getField('toggleshop');?>-->
+                   <!--<if condition="$toggleshop eq 0">-->
+                    <!--<ul>-->
+                   <!--<div class="background">-->
+                   		 <!--<a href="/shop/index/index" style="color:black;line-height:36px;width:99px;padding:0 16px;border-radius:6px; text-align:center;width:199px;">商城</a><br />-->
+                   <!--</div>-->
+                   <!--</ul>-->
+                   <!--</if>-->
+                   <ul>
+                   <div class="background">
+                   		<a href="/Home/Info/pin" style="color:white;line-height:36px;width:99px;padding:0 16px;border-radius:6px; text-align:center;width:199px;">激活码管理</a><br />
+                   </div>
+                   </ul>
+                   <ul class="an1">
+                    <div class="background">
+                   		<a style="color:white;line-height:36px;border-radius:6px;padding:0 16px; text-align:center;">管理组织</a>
+                        </div>
+                        	<li class="a1" style="color:#2680fa">
+                   			   <a style="color:#2680fa" href="/Home/Myuser/">推荐列表</a><br />
+        						<a href="/Home/Myuser/xzzh/" style="color:#2680fa">我的用户群</a><br />
+								<a href="/Home/Myuser/team/" style="color:#2680fa">我的组织</a><br />
+								<a href="/Home/Reghub/censor/" style="color:#2680fa">待审核列表</a><br />
+        					</li>
+                   </ul>
+
+                   <ul  class="an3">
+                    <div class="background">
+                   		<a style="color:white;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;">账户管理</a>
+                        </div>
+                   		<li class="a3">
+                        	<a href="/Home/Info/" style="color:#2680fa">个人资料</a><br />
+							<!-- <a href="/Home/Info/djye" style="color:#2680fa">冻结余额</a><br /> -->
+        					<a href="/Home/Info/xgmm/" style="color:#2680fa">更改密码</a><br />
+                        </li>
+                   </ul>
+                   <ul>
+                   
+                   	 <div class="background">
+                   		<a href="/Home/Info/cwmx" style="color:white;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">财务管理</a><br />
+                   </div>
+                   </ul>
+				    <ul  class="an4">
+                    <div class="background">
+                   		<a href="/Reghub/centor_pdb/" style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;">排单币</a>
+                        </div>
+                   </ul>
+                   <ul>
+                    <div class="background">
+                   
+                   		<a href="/Home/Index/news/" style="color:white;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">新闻公告</a><br />
+                   </div>
+                   </ul>
+
+                   
+                   <ul>
+                    <div class="background">
+                   		<a href="/Home/Myuser/lxwm/" style="color:white;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">联系我们</a><br />
+                   </div>
+                   </ul>
+                   <!--<ul  class="an5">-->
+                    <!--<div class="background">-->
+                      <!--<a style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;">任务管理</a>-->
+                        <!--</div>-->
+                      <!--<li class="a5">-->
+                  <!--<a href="/Home/Myuser/rwlb/"  style="color:#2680fa">任务列表</a><br />-->
+                   <!--<a href="/Home/Myuser/rwtj/"  style="color:#2680fa">提交任务</a><br />-->
+                        <!--</li>-->
+                   <!--</ul>                -->
+
+                       <ul class="dropdown">
+                     <div class="background">
+                    <a href="{:U('/Home/Login/logout')}"  style="color:white;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">
+                        退出
+                    </a>
+                    </div>
+                </ul>
+                   
+                    </div>	 
+           
+           </div>
+        </div>
+</aside>
+<script>
+$(".textBox_Box li").hide();
+$(".an1").mouseenter(
+						function(){
+							$(".textBox_Box .a1").show()
+						}
+					)
+							.mouseleave(
+						function(){
+							$(".textBox_Box .a1").hide()
+							
+							}
+							)
+							
+							
+
+$(".an2").mouseenter(
+						function(){
+							$(".textBox_Box .a2").show()
+						}
+					).mouseleave(
+						function(){
+							$(".textBox_Box .a2").hide()
+							
+							}
+							)
+
+
+
+$(".an3").mouseenter(
+						function(){
+							$(".textBox_Box .a3").show()
+						}
+					).mouseleave(
+						function(){
+							$(".textBox_Box .a3").hide()
+							
+							}
+							)
+$(".an4").mouseenter(
+						function(){
+							$(".textBox_Box .a4").show()
+						}
+					).mouseleave(
+						function(){
+							$(".textBox_Box .a4").hide()
+							
+							}
+							)
+$(".an5").mouseenter(
+            function(){
+              $(".textBox_Box .a5").show()
+            }
+          ).mouseleave(
+            function(){
+              $(".textBox_Box .a5").hide()
+              
+              }
+              )
+
+</script>

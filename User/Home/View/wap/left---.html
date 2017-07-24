@@ -1,0 +1,222 @@
+
+<style>
+li{list-style-type:none;}
+a{color:#999;}
+.background{padding:0 16px; border-radius:16px;width:166px;background:#2680fa;
+ }
+ body{background:#fffdec}
+.profile-picture{position:relative;}
+.stats-label text-color{color:#FFF;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		var height = $(document).height();
+		var height1 = $('#logo').height();
+		$('.profile-picture').height(height);
+		$('.content').height(height+height1+20);
+	});
+
+</script>
+
+
+<aside id="menu" style="background:#bfe5ff;height:1500px; z-index:10">
+ <div id="logo" class="light-version" style="border:0 solid red;"><span name="search"><img src="/img/logo.png" width="100%" height="40"></img></span></div>
+    <div id="navigation" >
+        <div class="profile-picture">
+           
+				
+            <div class="stats-label text-color">
+                <h4 class="font-extra-bold m-b-xs">
+                  <if condition="$userData.ue_level eq 0">
+                          会员
+                  </if>
+                   <if condition="$userData.ue_level eq 1">
+                          精英
+                  </if>
+                   <if condition="$userData.ue_level eq 2">
+                          经理
+                  </if>
+                   <if condition="$userData.ue_level eq 3">
+                          高级经理
+                  </if>
+                </h4>
+                <h4 class="font-extra-bold m-b-xs">{$userData['ue_account']}</h5>
+                <h4 class="font-extra-bold m-b-xs">{$userData['ue_money']} CNY</h4>
+                <h4 class="font-extra-bold m-b-xs">{$userData['shop_money']} 商城币</h4>                    
+                <h4 class="font-extra-bold m-b-xs">推荐人：{$userData['ue_accname']}</h4><br>
+                <h4 class="font-extra-bold m-b-xs" style="margin-top:-10px;">激活币：{$userData['pin_bi']}</h4>
+           </div>
+           
+           <div class="textBox_Box" style="font-size:16px;font-family:'微软雅黑';width:199px;margin-left:-56px;margin-top:26px;">
+                   <ul>
+                   <div class="background">
+                   		 <a href="/" style="color:black;line-height:36px;width:99px;padding:0 16px;border-radius:6px; text-align:center;width:199px;">我的首页</a><br />
+                   </div>
+                   </ul>
+                   
+                   <ul>
+                   <div class="background">
+                   		 <a href="/Home/Index/reg/" style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">注册会员</a><br />
+                   </div>
+
+                   </ul>
+                   </ul>
+                   <?php $toggleshop = M('system')->where(['SYS_ID'=>'1'])->getField('toggleshop');?>
+                   <if condition="$toggleshop eq 0">
+                    <ul>
+                   <div class="background">
+                   		 <a href="/shop/index/index" style="color:black;line-height:36px;width:99px;padding:0 16px;border-radius:6px; text-align:center;width:199px;">商城</a><br />
+                   </div>
+                   </ul>
+                   </if>
+                   <ul>
+                   <div class="background">
+                   		<a href="/Home/Info/pin" style="color:black;line-height:36px;width:99px;padding:0 16px;border-radius:6px; text-align:center;width:199px;">激活码管理</a><br />
+                   </div>
+                   </ul>
+				   <ul>
+                   <div class="background">
+                   		 <a href="/Home/Reghub/censor_pdb" style="color:black;line-height:36px;width:99px;padding:0 16px;border-radius:6px; text-align:center;width:199px;">排单币管理</a><br />
+                   </div>
+                   </ul>
+                   <ul class="an1">
+                    <div class="background">
+                   		<a style="color:black;line-height:36px;border-radius:6px;padding:0 16px; text-align:center;">管理组织</a>
+                        </div>
+                        	<li class="a1" style="color:#2680fa">
+                   			   <a style="color:#2680fa" href="/Home/Myuser/">推荐列表</a><br />
+        <a href="/Home/Myuser/xzzh/" style="color:#2680fa">我的用户群</a><br />
+		<a href="/Home/Myuser/team/" style="color:#2680fa">我的组织</a><br />
+        					</li>
+                   </ul>
+                    <ul  class="an2">
+                     <div class="background">
+                   	<a style="color:black;line-height:36px; padding:0 16px;border-radius:6px; text-align:center;">	推荐注册管理</a>
+                        	</div>
+                            <li class="a2">
+                   			    <a href="/Home/Myuser/" style="color:#2680fa">推荐人列表</a><br />
+        <a href="/Home/Reghub/censor" style="color:#2680fa">待审核列表</a><br />
+        					</li>
+                   </ul>
+                   <ul  class="an3">
+                    <div class="background">
+                   		<a style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;">账户管理</a>
+                        </div>
+                   		<li class="a3">
+                        	<a href="/Home/Info/" style="color:#2680fa">个人资料</a><br />
+        <a href="/Home/Info/xgmm/" style="color:#2680fa">更改密码</a><br />
+                        </li>
+                   </ul>
+                   <ul>
+                   
+                   	 <div class="background">
+                   		<a href="/Home/Info/cwmx" style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">财务管理</a><br />
+                   </div>
+                   </ul>
+				   <ul  class="an4">
+                    <div class="background">
+                   		<a href="/Home/turn/" style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;">大转盘抽奖</a>
+                        </div>
+                   </ul>
+                   <ul>
+                    <div class="background">
+                   
+                   		<a href="/Home/Index/news/" style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">新闻公告</a><br />
+                   </div>
+                   </ul>
+                   
+                   <ul>
+                   		 <div class="background">
+                   		<a href="/Home/Myuser/rme/" style="color:black;line-height:36px;padding:0 16px;width:360px; border-radius:6px; text-align:center;width:199px;">虚拟币</a><br />
+                   </div>
+                   </ul>
+                   
+                   <ul>
+                    <div class="background">
+                   		<a href="/Home/Myuser/lxwm/" style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">联系我们</a><br />
+                   </div>
+                   </ul>
+                   <ul  class="an5">
+                    <div class="background">
+                      <a style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;">任务管理</a>
+                        </div>
+                      <li class="a5">
+                  <a href="/Home/Myuser/rwlb/"  style="color:#2680fa">任务列表</a><br />
+                   <a href="/Home/Myuser/rwtj/"  style="color:#2680fa">提交任务</a><br />
+                        </li>
+                   </ul>                
+
+                       <ul class="dropdown">
+                     <div class="background">
+                    <a href="{:U('/Home/Login/logout')}"  style="color:black;line-height:36px;padding:0 16px; border-radius:6px; text-align:center;width:199px;">
+                        退出
+                    </a>
+                    </div>
+                </ul>
+                   
+                    </div>	 
+           
+           
+        </div>
+</aside>
+<script>
+$(".textBox_Box li").hide();
+$(".an1").mouseenter(
+						function(){
+							$(".textBox_Box .a1").show()
+						}
+					)
+							.mouseleave(
+						function(){
+							$(".textBox_Box .a1").hide()
+							
+							}
+							)
+							
+							
+
+$(".an2").mouseenter(
+						function(){
+							$(".textBox_Box .a2").show()
+						}
+					).mouseleave(
+						function(){
+							$(".textBox_Box .a2").hide()
+							
+							}
+							)
+
+
+
+$(".an3").mouseenter(
+						function(){
+							$(".textBox_Box .a3").show()
+						}
+					).mouseleave(
+						function(){
+							$(".textBox_Box .a3").hide()
+							
+							}
+							)
+$(".an4").mouseenter(
+						function(){
+							$(".textBox_Box .a4").show()
+						}
+					).mouseleave(
+						function(){
+							$(".textBox_Box .a4").hide()
+							
+							}
+							)
+$(".an5").mouseenter(
+            function(){
+              $(".textBox_Box .a5").show()
+            }
+          ).mouseleave(
+            function(){
+              $(".textBox_Box .a5").hide()
+              
+              }
+              )
+
+</script>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>云付国际云币商圈</title>
+    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/vendor/metisMenu/dist/metisMenu.css">
+    <link rel="stylesheet" href="/assets/vendor/animate.css/animate.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/helper.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/vendor/toastr/build/toastr.min.css">
+    <script src="/js/jquery.js"></script>
+</head>
+<style>
+    * {margin:0;padding:0;border:0;}
+    img {border:none;}
+    a {cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+    a:focus{outline:none;}
+    a,a:hover {text-decoration: none;}
+    body,html {font-family:"微软雅黑"; background: #eeeeee;}
+    ul li{ list-style:none;}
+    input[type="button"],input[type="submit"],input[type="reset"]{ -webkit-appearance:none;}
+    input{ border:none;outline:medium;outline:none;}
+    button{outline:none; border:none; background:#fff;}
+    input::-webkit-input-placeholder {color: #999999;}
+    .clr{clear: both;}
+    .loginuser2{display: block;
+        width: 100%;
+        border: 1px solid #d81e06;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 4px;
+        padding-left: 15px;
+        -webkit-box-shadow: 1px 3px 1px #d81e06;
+        -moz-box-shadow: 1px 3px 1px #d81e06;
+        box-shadow: 1px 3px 1px #d81e06;}
+    .loginuser3{display: block;
+        float: left;
+        border: 1px solid #d81e06;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 4px;
+        padding-left: 15px;
+        -webkit-box-shadow: 1px 3px 1px #d81e06;
+        -moz-box-shadow: 1px 3px 1px #d81e06;
+        box-shadow: 1px 3px 1px #d81e06;}
+    .btn-block_n{border: 1px solid #d81e06;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 4px;
+        padding-left: 15px;
+        -webkit-box-shadow: 1px 3px 1px #d81e06;
+        -moz-box-shadow: 1px 3px 1px #d81e06;
+        box-shadow: 1px 3px 1px #d81e06;
+        background: #fff;
+        color: #d81e06;
+        padding: 0;
+        font-size: 1.2em;
+        display: block;
+        width: 100%;}
+</style>
+<body class="blank"
+      style="min-width:320px;max-width:450px;margin:auto;">
+<!--[if lt IE 7]>
+<p class="alert alert-danger">
+    You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your
+    browser</a> to improve your experience.
+</p>
+<![endif]-->
+<!--<div class="color-line">
+</div>-->
+<div class="pull-left m">
+</div>
+<div class="login-container" style="width: 100%;">
+    <div class="row">
+        <div class="col-md-12">
+            <!--<div class="text-center m-b-md">
+                <img src="/img/logos.png">
+            </div>-->
+            <div class="hpanel" style="opacity: 0.9;padding-bottom: 10px;-moz-box-shadow: 5px 5px 5px #000;-webkit-box-shadow: 5px 5px 5px #000;box-shadow: 5px 5px 5px #000;">
+                <div class="panel-body" style="margin: 10px 5%;">
+                    <form name="logFrm" id="logFrm" action="{:U('/Home/Login/regadd')}" method="post">
+                        <input name="ip" type="text" id="ip" style="display:none">
+                        <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+                        <script>document.getElementById("ip").value = returnCitySN.cip;</script>
+
+
+
+                        <div class="form-group">
+                            <!--<label>手&nbsp机&nbsp号&nbsp码：</label>-->
+                            <input type="text" name="ue_phone" class="loginuser2" placeholder="请输入您的手机号" value="" id="user" required>
+                            <div class="fix"></div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <!--<label>验&nbsp&nbsp&nbsp&nbsp证&nbsp&nbsp&nbsp&nbsp码:</label>-->
+                            <input type=""value="" id="smsnum" class="loginuser3" name="smsnum" placeholder="请输入验证码"  style="width:60%;"  maxlength="4" required="">
+                            <button  id="phone-check" style="float:right;width:35%;background:#fff;color:#d81e06;font-size:16px;border-radius:6px;
+        line-height:40px;height:40px;border: 1px solid #d81e06; -webkit-box-shadow: 1px 3px 1px #d81e06;
+        -moz-box-shadow: 1px 3px 1px #d81e06;
+        box-shadow: 1px 3px 1px #d81e06;" type="button">获取验证码</button>
+                            <div class="clr"></div>
+                            <div class="fix"></div>
+                        </div>
+
+
+                        <script>
+                            $("#phone-check").click(function(){
+                                var ob = $(this);
+
+                                ob.attr("disabled",true);
+                                var phone = $('#user').val();
+//                                var acc = $('#ue_account').val();
+                                //alert(phone);
+                                var reg = /^1[3|4|5|8|7][0-9]\d{8}$/;
+                                if(phone == "" || !reg.test(phone)){
+                                    alert("请正确填写手机号码");
+                                    ob.removeAttr("disabled");
+                                    return;
+                                }
+
+                                $.post("/Home/login/yzm",{phone:phone},function(data){
+                                    //alert(data);
+                                    if(data==1){
+                                        alert("发送成功");
+                                    }else{
+                                        alert("发送失败");
+                                    }
+                                });
+                                var i=60;
+                                var intval = setInterval(function(){
+                                    ob.html(i);
+                                    i--;
+                                    if(i<0){
+                                        ob.removeAttr("disabled");
+                                        ob.html("重新获取");
+                                        clearInterval(intval);
+                                    }
+                                },1000);
+                            });
+                        </script>
+                        <div class="form-group">
+                            <!--<label>新登录密码：</label>-->
+                            <input type="password" name="password" class="loginuser2" placeholder="登录密码" value="" required >
+                            <div class="fix"></div>
+                        </div>
+                        <div class="form-group">
+                           <!-- <label>确认新密码：</label>-->
+                            <input type="password" name="password2" class="loginuser2" placeholder="确认登录密码" value="" required >
+                            <div class="fix"></div>
+                        </div>
+                        <div class="form-group">
+                            <!--<label>新登录密码：</label>-->
+                            <input type="password" name="ejmm" class="loginuser2" placeholder="支付密码" value="" required >
+                            <div class="fix"></div>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label>确认新密码：</label>-->
+                            <input type="password" name="ejmm2" class="loginuser2" placeholder="确认支付密码" value="" required >
+                            <div class="fix"></div>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label>确认新密码：</label>-->
+                            <input type="text" name="ue_account" class="loginuser2" placeholder="请输入您的昵称" value="" required >
+                            <div class="fix"></div>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label>确认新密码：</label>-->
+                            <input type="text" name="pemail" class="loginuser2" placeholder="推荐用户昵称" value="" required >
+                            <div class="fix"></div>
+                        </div>
+                            <!-- <label>确认新密码：</label>-->
+                        <button type="submit" class="btn-block_n" style="background-color: lightpink">注册</button>
+                        <a href="index" style="text-align:center" class="btn-block_n">返回</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-12 text-center">
+            <strong>Bear Stearns Cos</strong> - 中国社区<br>
+            2015 Bear Stearns Cos All Right Reserved
+        </div>
+    </div>-->
+</div>
+<script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="/assets/vendor/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/assets/vendor/metisMenu/dist/metisMenu.min.js"></script>
+<script src="/assets/vendor/iCheck/icheck.min.js"></script>
+<script src="/assets/vendor/sparkline/index.js"></script>
+<script src="/assets/vendor/toastr/build/toastr.min.js"></script>
+<script src="/assets/scripts/alert.js?v=1439998281"></script>
+<script src="/assets/scripts/homer.js"></script>
+
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "5000",
+        "hideDuration": "5000",
+        "timeOut": "5000",
+        "extendedTimeOut": "5000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+    $(document).ready(function () {
+        //toastr.warning('注意， 系统在北京时间下午5:30进行系统维护，维护期间无法登录，6:30系统恢复正常，谢谢');
+    });
+</script>
+</body>
+</html>

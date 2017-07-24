@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>{$usertitle}</title>
+<title>后台管理</title>
 <link href="/sncss/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/sncss/js/jquery.js"></script>
 
@@ -23,7 +23,7 @@
     
     <div class="welinfo">
     <span><img src="/sncss/images/sun.png" alt="天气" /></span>
-    <b>{$Think.session.adminuser}，欢迎使用信息管理系统</b><a href="/admin.php/Home/Index/adminlist">帐号设置</a>    </div>
+    <b>{$Think.session.adminuser}，欢迎使用信息管理系统</b><a href="/mshzadmin.php/Home/Index/adminlist">帐号设置</a>    </div>
     
     <!--<div class="welinfo">
     <span><img src="/sncss/images/time.png" alt="时间" /></span>
@@ -53,8 +53,8 @@
     <div class="uimakerinfo"><b>管理公告</b></div>
     
     <ul class="umlist">
-    <li><small>系统开关:<if condition="$zt.zt eq '0'" ><a href="/admin.php/Home/Index/gb">关闭系统</a>
-      <else/><a href="/admin.php/Home/Index/kq">开启系统</a></if><br />
+    <li><small>系统开关:<if condition="$zt.zt eq '0'" ><a href="/mshzadmin.php/Home/Index/gb">关闭系统</a>
+      <else/><a href="/mshzadmin.php/Home/Index/kq">开启系统</a></if><br />
 上次登入IP:<if condition="$scip.ip eq ''" >未登过<else/>{$scip.ip}({$scip.date})</if> <br />
 本次登入IP:{$bcip.ip}({$bcip.date})</small></li>
    

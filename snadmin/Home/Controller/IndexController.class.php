@@ -28,19 +28,34 @@ class IndexController extends CommonController {
      */
     
     public function usercheckto(){
-        $settings = include( APP_PATH . 'Home/Conf/settings.php' );
-        $user=I('user');
-    	//echo $user;die;
-    	$t=M('user')->where(array('UE_account'=>$user))->save(array('UE_check'=>1,'UE_status'=>0,'check_time'=>time()));
+        $settings = include( __ROOT__ . 'User/Home/Conf/settings.php' );
+        $user=I('post.user');
+    	$t=M('user')->where(array('UE_account'=>$user))->save(array('UE_check'=>1,'check_time'=>date('Y-m-d H:i:s',time())));
     	if($t){
             $tjr_name=M('user')->where(array('UE_account'=>$user))->getField('UE_accName');
-            M('user')->where(array('UE_account' => $tjr_name ))->setInc('jl_he',$settings['tjj']);
+            // M('user')->where(array('UE_account' => $tjr_name ))->setInc('tj_he',floatval($settings['tjj']));
     		$this->success('审核成功');
     	}else{
     		$this->error('审核失败');
     	}
     }
-    
+    public function user_bu(){
+        $user=I('get.id');
+        $t=M('user')->where(array('UE_ID'=>$user))->find();
+        $this->assign('userdata',$t);
+        $this->display('userbu');
+    }
+    public function usercheckno(){
+
+        $id=I('post.user_id');
+        $liyou=I('post.liyou');
+        $t=M('user')->where(array('UE_ID'=>$id))->save(array('liyou'=>$liyou,'UE_check'=>2));
+        if($t){
+            $this->success('提交成功');
+        }else{
+            $this->error('提交失败');
+        }
+    }
     public function admin_right(){
         
        // var_dump(I('post.'));
@@ -304,7 +319,6 @@ class IndexController extends CommonController {
     }
     
     public function team(){
-        //var_dump(I('get.user'));die;
         $this->user=I('get.user','0');
         $this->display('index/team');
     }
@@ -408,11 +422,11 @@ class IndexController extends CommonController {
          $data['yhmc']=I('post.yhmc');
          $data['zfb']=I('post.zfb');
          $data['weixin']=I('post.weixin');
-         $data['tj_he1']=I('post.tj_he1');
-         $data['tj_he']=I('post.tj_he');
-         $data['jl_he1']=I('post.jl_he1');
-         $data['jl_he']=I('post.jl_he');
-         $data['UE_money']=I('post.UE_money');
+         // $data['tj_he1']=I('post.tj_he1');
+         // $data['tj_he']=I('post.tj_he');
+         // $data['jl_he1']=I('post.jl_he1');
+         // $data['jl_he']=I('post.jl_he');
+         // $data['UE_money']=I('post.UE_money');
          $data['zfb']=I('post.zfb');
          $data['UE_phone']=I('post.UE_phone');
          $data['UE_theme']=I('post.UE_theme');
@@ -458,7 +472,7 @@ class IndexController extends CommonController {
         if(I('post.MB_userpwd')<>''){$data['MB_userpwd']=md5(I('post.MB_userpwd'));}
         //dump($data);die;
         if(M('member')->where(array('MB_username'=>I('post.MB_username')))->save($data)){
-            $this->success('修改成功!','/admin.php/Home/Index/adminlist');
+            $this->success('修改成功!','/mshzadmin.php/Home/Index/adminlist');
         }else{
             $this->success('修改失败!');
         }
@@ -473,7 +487,7 @@ class IndexController extends CommonController {
         if(I('post.MB_username')<>''&&I('post.MB_right')<>''&&I('post.MB_userpwd')<>''){
         //dump($data);die;
         if(M('member')->add($data)){
-            $this->success('添加成功!','/admin.php/Home/Index/adminlist');
+            $this->success('添加成功!','/mshzadmin.php/Home/Index/adminlist');
         }else{
             $this->success('添加失败!');
         }
@@ -622,7 +636,7 @@ class IndexController extends CommonController {
     
         if($data<>''&& $userxx['mb_username']<>''){
             M('member')->where(array('MB_ID'=>$data))->delete();
-            $this->success('删除成功!','/admin.php/Home/Index/adminlist');
+            $this->success('删除成功!','/mshzadmin.php/Home/Index/adminlist');
         }else{
             $this->success('不能删除!');
         }
@@ -837,10 +851,10 @@ public function jbzscl(){
                 $user_zq = M('user')->where(array('UE_account' => I('post.user')))->find();
                 if ($User->where(array('UE_account' => I('post.user')))->setInc('UE_money', I('post.sl'))){
                     $userxx = M('user')->where(array('UE_account' => I('post.user')))->find();
-                    $note3 = "系统操作";
+                    $note3 = "静态钱包系统操作";
                     $record3 ["UG_account"] = I('post.user'); // 登入轉出賬戶
                     $record3 ["UG_type"] = 'jb';
-                    $record3 ["UG_money"] = I('post.sl'); // 金幣
+                    $record3 ["UG_money"] = '+'.I('post.sl'); // 金幣
                     $record3 ["UG_allGet"] = $user_zq['ue_money']; //
                     $record3 ["UG_balance"] = $userxx['ue_money']; // 當前推薦人的金幣餘額
                     $record3 ["UG_dataType"] = 'xtzs'; // 金幣轉出
@@ -855,15 +869,16 @@ public function jbzscl(){
                 $this->success('用户 名不存在或填写有误!');
             }
         } elseif (I('post.lx') == 'yb'){
+
             if (I('post.sl') <> '' && $User->where(array('UE_account' => I('post.user')))->find() <> 0 && preg_match('/^[0-9-]{1,20}$/', I('post.sl'))){
-                if ($User->where(array('UE_account' => I('post.user')))->setInc('tj_he', I('post.sl'))){
+                if ($User->where(array('UE_account' => I('post.user')))->setInc('jl_he', I('post.sl'))){
                     $userxx = M('user')->where(array('UE_account' => I('post.user')))->find();
-                    $note3 = "系统赠送";
+                    $note3 = "动态钱包系统赠送";
                     $record3 ["UG_account"] = I('post.user'); // 登入轉出賬戶
                     $record3 ["UG_type"] = 'yb';
-                    $record3 ["yb"] = I('post.sl'); // 金幣
-                    $record3 ["yb1"] = I('post.sl'); //
-                    $record3 ["ybhe"] = $userxx['tj_he']; // 當前推薦人的金幣餘額
+                    $record3 ["UG_money"] = '+'.I('post.sl'); // 金幣
+                    // $record3 ["yb1"] = I('post.sl'); //
+                    // $record3 ["ybhe"] = $userxx['tj_he']; // 當前推薦人的金幣餘額
                     $record3 ["UG_dataType"] = 'xtzs'; // 金幣轉出
                     $record3 ["UG_note"] = $note3; // 推薦獎說明
                     $record3["UG_getTime"] = date('Y-m-d H:i:s', time()); //操作時間
@@ -1335,7 +1350,6 @@ public function jbzscl(){
     
     
     
-    
 public function tgbz_list_sd(){
      
     $settings = include(APP_PATH . 'Home/Conf/settings.php');
@@ -1353,15 +1367,9 @@ public function tgbz_list_sd(){
     $day2 = $NowTime2;
     $diff = diffBetweenTwoDays($day1, $day2);
 
-    //print_r($NowTime);
-    //print_r($diff) ;
-     
-     
+    
     if ($diff >= $settings['tgbz_time']) {
-         
-         
-         
-         
+    
         if(I ( 'get.id' )<>''){
             if(!stristr($_SERVER['HTTP_REFERER'],ACTION_NAME))//初始化选中值
             {

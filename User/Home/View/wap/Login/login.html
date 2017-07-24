@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+    <!-- Page title -->
+
+    <title>民生互助</title>
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+
+
+    <!-- Vendor styles -->
+
+    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/font-awesome.css"/>
+
+    <link rel="stylesheet" href="/assets/vendor/metisMenu/dist/metisMenu.css"/>
+
+    <link rel="stylesheet" href="/assets/vendor/animate.css/animate.css"/>
+
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css"/>
+
+
+    <!-- App styles -->
+
+    <link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"/>
+
+    <link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/helper.css"/>
+
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <link rel="stylesheet" href="/assets/vendor/toastr/build/toastr.min.css"/>
+
+
+</head>
+<style>
+    * {margin:0;padding:0;border:0;}
+    img {border:none;}
+    a {cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+    a:focus{outline:none;}
+    a,a:hover {text-decoration: none;}
+    body,html {font-family:"微软雅黑"; background: #fff;}
+    ul li{ list-style:none;}
+    input[type="button"],input[type="submit"],input[type="reset"]{ -webkit-appearance:none;}
+    input{ border:none;outline:medium;outline:none;}
+    button{outline:none; border:none; background:#fff;}
+    input::-webkit-input-placeholder {color: #999999;}
+
+    .form-control{border-color: #ccc!important;
+        height: 40px;
+        color: #6a6c6f;
+        -webkit-box-shadow: 1px 3px 1px #ccc;
+        -moz-box-shadow: 1px 3px 1px #ccc;
+        box-shadow: 1px 3px 1px #ccc;}
+    .loginuser1{height: 40px;border:1px solid #ccc!important;border-radius: 4px;--webkit-box-shadow: 1px 3px 1px #ccc;
+        -moz-box-shadow: 1px 3px 1px #ccc;
+        box-shadow: 1px 3px 1px #ccc;border-radius: 4px; padding-left: 15px;margin-bottom: 10px;}
+    .panel-body { padding: 15px 5% 0 5%;}
+    .loginuser1{}
+    .cercode_input{ border: 1px solid #ec931c!important;height: 40px;border-radius: 4px;padding-left: 12px;margin-bottom: 10px;-webkit-box-shadow: 1px 1px 1px;  -moz-box-shadow: 1px 1px 1px; box-shadow: 1px 1px 1px }
+    .cercode_img{border: 1px solid #ccc;border-radius: 4px; -webkit-box-shadow: 1px 3px 1px #ccc;
+        -moz-box-shadow: 1px 3px 1px #ccc;
+        box-shadow: 1px 3px 1px #ccc;   }
+    .clr{clear: both;}
+    .ver_delu{ margin: 10px 5%;}
+    .ver_delu ul li{ float: left; width: 50%; text-align: center;}
+    .ver_delu ul li button{width: 95%;
+        height: 38px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #0D71B3;
+        margin-right: 10%;
+        -webkit-box-shadow: 1px 3px 1px #ccc;
+        -moz-box-shadow: 1px 3px 1px #ccc;
+        box-shadow: 1px 3px 1px #ccc;}
+    .ver_delu ul li a{width: 95%;
+        margin-left: 5%;
+        display: block;
+        line-height: 38px;
+        height: 38px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #d81e06;
+        -webkit-box-shadow: 1px 3px 1px #ccc;
+        -moz-box-shadow: 1px 3px 1px #ccc;
+        box-shadow: 1px 3px 1px #ccc;
+       }
+    .ver_delu ul li input{width: 90%;
+        height: 38px;
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #d81e06;
+        -webkit-box-shadow: 1px 3px 1px #ccc;
+        -moz-box-shadow: 1px 3px 1px #ccc;
+        box-shadow: 1px 3px 1px #ccc;}
+    @media screen and (max-width: 320px) {
+        .cercode_img{border: 1px solid #ccc;width: 94px;}
+
+    }
+</style>
+<body class="blank"
+      style="min-width:320px;max-width:450px;margin:auto;background-image:url(/img/bg_bg.png);background-origin:content;background-position:50% 50%; background-size:cover;background-repeat:no-repeat; ">
+<!--<body style="background:#f5eee3">-->
+
+
+<!-- Simple splash screen-->
+
+<!--[if lt IE 7]>
+
+<p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a
+        <!--href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
+
+<!--<![endif]&ndash;&gt;-->
+
+
+<!--<div class="color-line"></div>-->
+
+
+<div class="pull-left m">
+
+    <!--
+
+    <a href="" class="btn btn-primary">规则</a>
+
+    -->
+
+</div>
+
+
+<div class="login-container" style="width: auto;padding-top:150px;margin: 0 20px;">
+   <h1 style="text-align: center;color: #fff;margin-bottom: 20px;"><img src="/img/minsheng.png" alt="" width="180"></h1>
+    <div class="row">
+
+        <div class="col-md-12" style="padding:0;">
+
+            <!--<div class="text-center m-b-md">-->
+				<!-- <div style='font-size:16px;'>测试站 请联系卖家 15378733044
+				qq:170663379
+				</div> -->
+                <!--<img src="/img/logos.png" style="width: 252px">-->
+                <!--<h1 style="color:black;font-weight: bolder">明鑫公益</h1>-->
+                <!--
+                    <font color="#CCCCCC">
+                    <h3>登录会员社区</h3>
+
+                    <small>我们需要你给予这个世界更多的爱心</small>
+                    </font>-->
+
+           <!-- </div> -->
+
+            <div class="hpanel">
+
+                <div class="panel-body">
+
+                    <form name="logFrm" id="logFrm" action="/Home/Login/logincl" method="post">
+
+                        <!--<strong style="color:red">抱歉，现在系统暂停维护中，稍后开放，谢谢您的等待</strong>-->
+
+                      <!--   <div class="form-group">
+                            <label id="langLbl" class="control-label" for="username">Multi language selection</label>
+                            <select class="form-control" id="lang" name="lang">
+								<option value="en-US">English</option>
+                                <option value="zh-CN">简体中文</option>
+                                <option value="zh-TW">繁体中文</option>
+                            </select>
+                        </div> -->
+                        <div class="form-group" style="background:#fff;border-radius: 25px;border: 1px solid #ccc;">
+
+                            <!--<label class="usrname control-label" for="username">手机</label>-->
+                             <p style="float:left;width:20%;margin:0; border-right: 1px solid #ccc;"><img src="/cssmmm/people.png" alt="" height="30px;" style="float: left; margin: 5px 15px;"></p>
+                            <input type="text" placeholder="请输入您的手机号" title="" required name="account" id="account"
+                                   class="form-control"  value="" style="float:left;width:80%;border:none;background: none;box-shadow: none;">
+                                   <div style="clear:both;"></div>
+
+                          <!--   <span class="usr_warn help-block small">Should be your email or cellphone</span> -->
+
+                        </div>
+
+                        <div class="form-group" style="background:#fff;border-radius: 25px;border: 1px solid #ccc;">
+
+                            <!--<label class="pwd control-label" for="password">密码</label>-->
+                             <p style="float:left;width:20%;margin:0; border-right: 1px solid #ccc;"><img src="/cssmmm/password_icon.png" alt="" height="30px;" style="float: left; margin: 5px 15px;"></p>
+                            <input type="password" placeholder="请输入您的密码" required name="password" id="password"
+                                   class="form-control" value="" style="float:left;width:80%;border:none;background: none;box-shadow: none;">
+                                <div style="clear:both;"></div>
+                          <!--   <span class="pwd_warn help-block small" style='display:inline;'>Login password</span> -->
+                        </div>
+
+                 <!--        <div class="checkbox">
+
+                            <p class="anns help-block small">(Please avoid using the computer for public 
+
+use.)</p>
+ -->
+                        </div>
+
+                        <div style="display:block;margin: 0 5%;">
+						    <!--<label class="yanzheng control-label" >验证码</label><br>-->
+                            <input  style="float: left;width: 48%;" name="yzm" id="verCode" placeholder="输入验证码" type="text" class="loginuser1"  onclick="JavaScript:this.value=''"/>
+                            <img src="/mshzadmin.php/Home/login/verify" class="cercode_img" name="myHeader" height="35" id="myHeader" onClick="this.src='/mshzadmin.php/Home/login/verify?'+Math.random();" style="float: left;width: 48%;margin-left: 4%;height: 40px;" />
+                            <div class="clr"></div>
+                        </div>
+                        <div class="ver_delu">
+                            <ul>
+                                <li style="width:100%;"><button type="submit"  style="width:100%;background: #5093d7; height: 46px; box-shadow: none;border: none;color: #fff;font-size: 1.5em;border-radius: 25px;">登录</button></li>
+                                <!--<li><a href="{:U('register_new')}" style="text-align:center" class="btn-block_n">注册</a></li>-->
+                               
+                                <!--<li><a href="/home/Login/retrieve_password.html">忘记密码？</a></li>-->
+                            </ul>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="ver_delu">
+                            <ul>
+                             <li style="width:100%;"><a href="{:U('retrieve_password')}" style="text-align: center;width: 100px;float: right; border-radius: 25px;box-shadow: none;color: #fff;background: #5093d7;border: none;" class="btn-block_n">忘记密码</a></li>
+                             </ul>
+                            <div class="clr"></div>
+                            </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+		<!--<div style="text-align:center;">
+		<span style="color:#FFF;">中文名：贝尔斯登公司</br>
+		英文名：Bear Stearns Cos.</br>全球领先的金融服务公司，原美国华尔街第五大投资银行。成立于1923年，总部位于纽约市，主营金融服务、投资银行、投资管理。</span>
+		</div>-->
+
+
+<!-- Vendor scripts -->
+
+<!--script src="/assets/vendor/jquery/dist/jquery.min.js"></script-->
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+
+<!-- <script src="/assets/vendor/jquery-ui/jquery-ui.min.js"></script> -->
+
+<!-- <script src="/assets/vendor/slimScroll/jquery.slimscroll.min.js"></script> -->
+
+<!-- <script src="/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+<!-- <script src="/assets/vendor/metisMenu/dist/metisMenu.min.js"></script> -->
+
+<!-- <script src="/assets/vendor/iCheck/icheck.min.js"></script> -->
+
+<!-- <script src="/assets/vendor/sparkline/index.js"></script> -->
+
+<!-- <script src="/assets/vendor/toastr/build/toastr.min.js"></script> -->
+
+<!-- <script src="/lanchange.js"></script> -->
+
+<!-- <script src="/assets/scripts/alert.js?v=1439998281"></script> -->
+<!-- App scripts -->
+
+<!-- <script src="/assets/scripts/homer.js"></script> -->
+<script>
+
+    //多语言支持
+    (function () {
+        var langPak = {
+			"en-US": {
+                langLbl: "Multi language selection",
+                usrname: "Member number",
+                pwd: "Password",
+                usrWarn: "Should be your cellphone or email",
+                pwdWarn: "Login password",
+                anns: "(Please avoid using the computer for public use.)",
+                btn: "Sign in",
+            },
+            "zh-CN": {
+                langLbl : "多语言选择",
+                usrname: "用户名",
+                pwd: "密码",
+                usrWarn: "手机或邮箱为您的用户名",
+                pwdWarn: "登录密码",
+                anns: "（请避免在公共电脑上操作）",
+                btn: "登录",
+            },
+            "zh-TW": {
+                langLbl : "多語言選擇",
+                usrname: "用戶名",
+                pwd: "密碼",
+                usrWarn: "手機或郵箱為您的用戶名",
+                pwdWarn: "登錄密碼",
+                anns: "（請避免在公共電腦上操作）",
+                btn: "登錄",
+            }
+        };
+        var $slt = $("#lang");
+        var $fom = $("#logFrm");
+        var $langLbl = $("#langLbl");
+        $slt.change(function () {
+            var lang = langPak[$slt.val()];
+            $langLbl.text(lang.langLbl);
+            $fom.find(".usrname").text(lang.usrname);
+            $fom.find(".pwd").text(lang.pwd);
+            $fom.find(".usr_warn").text(lang.usrWarn);
+            $fom.find(".pwd_warn").text(lang.pwdWarn);
+            $fom.find(".anns").text(lang.anns);
+            $fom.find(".btn-success").text(lang.btn);
+            $fom.find(".forg a").text(lang.forg);
+        });
+    })(jQuery);
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "5000",
+        "hideDuration": "5000",
+        "timeOut": "5000",
+        "extendedTimeOut": "5000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+    $(document).ready(function () {
+        //toastr.warning('注意， 系统在北京时间下午5:30进行系统维护，维护期间无法登录，6:30系统恢复正常，谢谢');
+    });
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+﻿# 以下文件不被管控
+##################################
+# 数据库配置文件
+User/Home/Conf/config.php
+User/Shop/Conf/config.php
+snadmin/Home/Conf/config.php
+snadmin/Shop/Conf/config.php
+db_backup/
+
+# 运行时文件
+Runtime/
+qrcode/reg/
+Uploads/
+!.gitignore
+
+# 编辑器配置文件
+.project
+.settings
+
+# phpStudy 运行时文件
+%SystemDrive%/

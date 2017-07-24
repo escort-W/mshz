@@ -31,7 +31,7 @@
 					分成设置
 				</span>
 			</div>
-			<form id="form1" name="form1" method="post" action="/admin.php/Home/Index/settings">
+			<form id="form1" name="form1" method="post" action="/mshzadmin.php/Home/Index/settings">
 				<input name="UE_account" type="hidden" class="dfinput" value="{$userdata['ue_account']}"
 				/>
 				<ul class="forminfo">
@@ -43,12 +43,12 @@
 							是否烧伤
 						</label>
 						<if condition="$shaoshang eq 1">
-							<input type="radio" checked="checked" name="shaoshang" id="shaoshang" value="1"/>
+							<input type="radio" checked="checked" name="shaoshang"  value="1"/>
 							开启
-							<input type="radio" name="shaoshang" id="shaoshang" value="0"/>关闭
+							<input type="radio" name="shaoshang"  value="0"/>关闭
 							<else />
-							<input type="radio" name="shaoshang" id="shaoshang" value="1"/>开启
-							<input type="radio" checked="checked" name="shaoshang" id="shaoshang" value="0"/>
+							<input type="radio" name="shaoshang" value="1"/>开启
+							<input type="radio" checked="checked" name="shaoshang"  value="0"/>
 							关闭
 						</if>
 						<i>
@@ -58,7 +58,7 @@
 						<label>
 							最多接受帮助
 						</label>
-						<input name="apply_money_upper_limit" type="text" id="supply_money_upper_limit"
+						<input name="apply_money_upper_limit" type="text" 
 						class="dfinput" required="true" value="{$apply_money_upper_limit}" />
 						元
 						<i>
@@ -85,19 +85,26 @@
 					</li>
 					<li>
 						<label>
-							3000-10000
+							3001-10000
 						</label>
 						<input type="text" value="{$jt_li2}" id="lixi2"
 							   class="dfinput" name="jt_li2" required="">%
 					</li>
 					<li>
 						<label>
-							10000-50000
+							10001-50000
 						</label>
 						<input type="text" value="{$jt_li3}" id="lixi3"
 							   class="dfinput" name="jt_li3" required="">%
 					</li>
 				<h3>团队奖</h3>
+					<li>
+						<label>
+							最高
+						</label>
+						<input type="text" value="{$max_user_level}" id="lixi3"
+							   class="dfinput" name="max_user_level" required="">代
+					</li>
 					<li>
 						<label>
 							一代
@@ -175,19 +182,39 @@
 					</li>
 						<li>
 						<label>
-							10000-30000
+							10001-30000
 						</label>
 						<input type="text" value="{$pdb2}" id="lixi3"
 							   class="dfinput" name="pdb2" required="">个
 					</li>
 					<li>
 						<label>
-							30000-50000
+							30001-50000
 						</label>
 						<input type="text" value="{$pdb3}" id="lixi3"
 							   class="dfinput" name="pdb3" required="">个
 					</li>
-
+            		<li>
+						<label>
+							匹配后
+						</label>
+						<input type="text" value="{$p_time}" id="lixi3"
+							   class="dfinput" name="p_time" required="">小时未打款冻结账号
+					</li>
+					<li>
+						<label>
+							确认打款后
+						</label>
+						<input type="text" value="{$s_time}" id="lixi3"
+							   class="dfinput" name="s_time" required="">小时未确认收款冻结账号
+					</li>
+					<li>
+						<label>
+							接受帮助后
+						</label>
+						<input type="text" value="{$bx_pd_time}" id="lixi3"
+							   class="dfinput" name="bx_pd_time" required="">小时未排单冻结账号
+					</li>
 					<li>
 						<label>
 							&nbsp;
@@ -198,21 +225,6 @@
 					</li>
 				</ul>
 			</form>
-			<style>
-				.pages a,.pages span { display:inline-block; padding:2px 5px; margin:0
-				1px; border:1px solid #f0f0f0; -webkit-border-radius:3px; -moz-border-radius:3px;
-				border-radius:3px; } .pages a,.pages li { display:inline-block; list-style:
-				none; text-decoration:none; color:#58A0D3; } .pages a.first,.pages a.prev,.pages
-				a.next,.pages a.end{ margin:0; } .pages a:hover{ border-color:#50A8E6;
-				} .pages span.current{ background:#50A8E6; color:#FFF; font-weight:700;
-				border-color:#50A8E6; }
-			</style>
-			<div class="pages">
-				<br />
-				<div align="right">
-					{$page}
-				</div>
-			</div>
 		</div>
 	</body>
 

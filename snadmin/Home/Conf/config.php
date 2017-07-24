@@ -5,6 +5,10 @@ return array(
 'DB_NAME'   => 'mshz', // 数据库名
 'DB_USER'   => 'root', // 用户名
 'DB_PWD'    => 'root', // 密码
+// 'DB_HOST'   => '122.114.150.35', // 服务器地址
+// 'DB_NAME'   => 'mshz', // 数据库名
+// 'DB_USER'   => 'mshz', // 用户名
+// 'DB_PWD'    => 'ymaGs4NUPEADvf80', // 密码11444444
 'DB_PORT'   => 3306, // 端口
 'DB_PREFIX' => 'ot_', // 数据库表前缀 
 'DB_CHARSET'=> 'utf8', // 字符集

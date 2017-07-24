@@ -19,7 +19,7 @@
     <div class="formbody">
     
     <div class="formtitle"><span>基本信息</span></div>
-      <form id="form1" name="form1" method="post" action="/admin.php/Home/Index/jbzscl">
+      <form id="form1" name="form1" method="post" action="/mshzadmin.php/Home/Index/jbzscl">
 	  <input name="UE_account"  type="hidden" class="dfinput" value="{$userdata['ue_account']}" />
     <ul class="forminfo"><li><label>赠送类型</label><cite><input name="lx" type="radio" value="jb" checked="checked" />
       静态钱包&nbsp;&nbsp;&nbsp;&nbsp;<input name="lx" type="radio" value="yb" />
@@ -55,16 +55,14 @@
 		   <td>{$v.ug_gettime}</td>
 		    <td>
 			 <if condition="$v.ug_type eq 'jb'" >静态钱包{$v.ug_money}</if>
-				  <if condition="$v.ug_type eq 'yb'" >动态钱包{$v.yb}</if>
-				  <if condition="$v.ug_type eq 'zsb'" >经理钱包{$v.zsb}</if>
+				  <if condition="$v.ug_type eq 'yb'" >动态钱包{$v.ug_money}</if>
 			
 			
 			</td>
         
         <td>
 		 <if condition="$v.ug_type eq 'jb'" >静态钱包{$v.ug_balance}</if>
-				  <if condition="$v.ug_type eq 'yb'" >动态钱包{$v.ybhe}</if>
-				  <if condition="$v.ug_type eq 'zsb'" >经理钱包{$v.zsbhe}</if>
+				  <if condition="$v.ug_type eq 'yb'" >动态钱包{$v.ug_money}</if>
 		
 	</td>
         

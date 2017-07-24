@@ -48,12 +48,12 @@ $(document).ready(function(){
     
     	<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td> <form id="form1" name="form1" method="post" action="/admin.php/Home/Index/tgbz_list">
+    <td> <form id="form1" name="form1" method="post" action="/mshzadmin.php/Home/Index/tgbz_list">
 	 
    <input name="user" type="text" class="dfinput" id="user" />
 	<input name="" type="submit" class="btn" value="确认搜索"/>
       </form></td>
-    <td align="right"><a href="/admin.php/Home/Index/tgbz_list/cz/0/">未匹配</a> <a href="/admin.php/Home/Index/tgbz_list/cz/1/">已匹配</a> <a onClick="javascript:if(!confirm('1-1自动匹配前请先备份备据,未备份请点取消,点确定自动匹配所有订单!'))  return  false; "  href="/admin.php/Home/Index/zdpp_cl">自动匹配</a> </td>
+    <td align="right"><a href="/mshzadmin.php/Home/Index/tgbz_list/cz/0/">未匹配</a> <a href="/mshzadmin.php/Home/Index/tgbz_list/cz/1/">已匹配</a> <a onClick="javascript:if(!confirm('1-1自动匹配前请先备份备据,未备份请点取消,点确定自动匹配所有订单!'))  return  false; "  href="/mshzadmin.php/Home/Index/zdpp_cl">自动匹配</a> </td>
   </tr>
   <tr>
     <td>总充值:{$z_jgbz} 交易成功:{$z_jgbz2} 交易中:{$z_jgbz3} </td>
@@ -77,14 +77,14 @@ $(document).ready(function(){
         <th>提供昵称</th>
 		<th>提供时间</th>
 		<th>提供操作</th>
-		<th>数据操作</th>
+		<!-- <th>数据操作</th> -->
         </tr>
         </thead>
         <tbody>
 		
 		<foreach name='list' item='v'>
         <tr>
-		 <td>{$v.id} <a onClick="javascript:if(!confirm('确认要删除吗？'))  return  false; " href="/admin.php/Home/Index/tgbz_list_del/id/{$v.id}" >删除</a></td>
+		 <td>{$v.id} <a onClick="javascript:if(!confirm('确认要删除吗？'))  return  false; " href="/mshzadmin.php/Home/Index/tgbz_list_del/id/{$v.id}" >删除</a></td>
 		 <td>{$v.user}</td>
 		  <td>
 		  <if condition="$v.zffs1 eq 1" >银行</if>
@@ -102,8 +102,8 @@ $(document).ready(function(){
 		</td>
         <td>{$v.user_nc}</td>
         <td>{$v.date}</td>
-        <td><a href="/admin.php/Home/Index/tgbz_list_sd/id/{$v.id}/">手动匹配</a></td>
-            <td><a href="/admin.php/Home/Index/tgbz_list_xg/id/{$v.id}/">数据修改</a></td>
+        <td><a href="/mshzadmin.php/Home/Index/tgbz_list_sd/id/{$v.id}/">手动匹配</a></td>
+            <!-- <td><a href="/mshzadmin.php/Home/Index/tgbz_list_xg/id/{$v.id}/">数据修改</a></td> -->
         </tr> 
        </foreach>
         </tbody>

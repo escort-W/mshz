@@ -212,8 +212,8 @@ function ppdd_add2($p_id,$g_id){
 	// echo $p_user1['user'].'<br>';
 	if(M('ppdd')->add($data_add)){
 		//查询支付方用户信息
-		$pay_user=M('user')->where(array('UE_account'=>$p_user1['user']))->find();
-		if($pay_user['ue_phone']) sendSMS($pay_user['ue_phone'],"您好！您提供帮助的资金：".$p_user1['jb']."元，已匹配成功，请登录网站查看匹配信息，并打款！");
+		// $pay_user=M('user')->where(array('UE_account'=>$p_user1['user']))->find();
+		// if($pay_user['ue_phone']) sendSMS($pay_user['ue_phone'],"您好！您提供帮助的资金：".$p_user1['jb']."元，已匹配成功，请登录网站查看匹配信息，并打款！");
 		return true;
 	}else{
 		return false;

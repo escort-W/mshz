@@ -66,27 +66,6 @@ class IndexController extends CommonController {
 		}
 	}
 	
-	function tedit(){
-		//die;
-		if(IS_POST){			
-			$model = M("shop_orderform");
-			$data['cid'] = I("post.name");
-			$id = I("post.id");
-			$re = $model->where(array("id"=>$id))->save($data);
-			//$this->ajax_mes($re);
-			$this->ajax_mes($re);
-		}
-	}
-	function ttedit(){
-		if(IS_POST){
-			$model = M("shop_orderform");
-			$data['caddress'] = I("post.name");
-			$id = I("post.id");
-			$re = $model->where(array("id"=>$id))->save($data);
-			//$this->ajax_mes($re);
-			$this->ajax_mes($re);
-		}
-	}
 	function del(){
 		if(IS_POST){
 			$id = I("id");
@@ -105,8 +84,16 @@ class IndexController extends CommonController {
 		$page = new \Think\Page($count,12);
 		$show = $page->show();
 		//var_dump($show);die;
-
+		// $mo = $model->select();
+		foreach($re as $k=>$v){
+			$user = M("user")->where(array('UE_account'=>$re[$k]['user']))->find();
+			// dump($user);
+			$re[$k]['lx_weixin'] = $user['lx_weixin'];
+		}
+		// dump($re);
+		// $list1 = $user['lx_weixin'];
 		$this->assign("page",$show);
+		// $this->assign('list1',$list1);
 		$this->assign('list',$re);
 		$this->display();
 	}

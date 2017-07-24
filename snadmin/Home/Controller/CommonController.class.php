@@ -16,7 +16,7 @@ class CommonController extends Controller {
 			
 		if (! isset ( $_SESSION ['adminuser'] )) {
 			// $this->error('請先登錄!',U('Login/index'));			
-			$this->success('请先登录','/admin.php/Home/Login');
+			$this->success('请先登录','/mshzadmin.php/Home/Login');
 			die;
 		}
 		
@@ -27,12 +27,12 @@ class CommonController extends Controller {
 			$right1 = json_decode($right['mb_rights'],true);
 			//dump($right1);
 			/* if($czmc<>'main'&&$czmc<>'df1'&&$czmc<>'top'&&$czmc<>'left'&&$czmc<>'userlist'&&$czmc<>'team'&&$czmc<>'rggl'&&$czmc<>'getTreeso'&&$czmc<>'getTree'&&$czmc<>'get_childs'&&$czmc<>'getTreeInfo'&&$czmc<>'getTreeBaseInfo'&&$czmc<>'userbtc'&&$czmc<>'jbzs'){
-				$this->error('您暂无权限操作!','/admin.php/Home/Index/df1');die;
+				$this->error('您暂无权限操作!','/mshzadmin.php/Home/Index/df1');die;
 				//echo '无权限';
 			} */
 			
 			if(!in_array(ACTION_NAME,$right1)){
-				$this->error('您暂无权限操作!','/admin.php/Home/Index/df1');die;
+				$this->error('您暂无权限操作!','/mshzadmin.php/Home/Index/df1');die;
 				//echo '无权限';
 			}
 				
@@ -57,7 +57,7 @@ class CommonController extends Controller {
 		if (($nowtime - $s_time) > 6000000) {
 		session_unset();
     	session_destroy();
-			$this->error('当前用户登录超时，请重新登录', U('/admin.php/Home/Login/'));
+			$this->error('当前用户登录超时，请重新登录', U('/mshzadmin.php/Home/Login/'));
 		} else {
 			$_SESSION['logintime'] = $nowtime;
 		}

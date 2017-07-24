@@ -58,14 +58,13 @@ var $user1 = $('#user1').val();
 		type: "post",
 		dataType : "json",
 		global : false,
-		url : "/admin.php/Home/Common/getTree",
+		url : "/mshzadmin.php/Home/Common/getTree",
 		data : {
 		user1 : $user1
 		},
 		success : function(data, textStatus) {
 			if (data.status == 0)
 			{
-				console.log(data.data);
 				zNodes1 = data.data;
 				$.fn.zTree.init($("#treeDemo"), setting, zNodes1);
 			} else {
@@ -84,6 +83,8 @@ var $user1 = $('#user1').val();
 
 $(function(){
 
+
+
 $('#btn').click(function(){
 
 var $user = $('#user').val();
@@ -92,12 +93,11 @@ $.ajax({
 		dataType : "json",
 		global : false,
 
-		url : "/admin.php/Home/Common/getTreeso",
+		url : "/mshzadmin.php/Home/Common/getTreeso",
 		data : {
 		user : $user
 		},
 		success : function(data, textStatus) {
-			//alert($user);
 			if (data.status == 0)
 			{
 			//alert(data.nr);
@@ -130,13 +130,8 @@ $.ajax({
 <div class="formbody">
     
     <div class="core_con">
-	<div style="font-size:9pt;">
-	<form action="" method="get">
-		<input name="user1" id="user1"  type="hidden" value="{$user}" />
-		会员账号 : <input id="user" name="user" type="text">
-		<input name="" type="button" id="btn" value="搜索">
-		<span id="daishu"></span>
-	</form></div>
+	<div style="font-size:9pt;"><form action="" method="get"><input name="user1" id="user1"  type="hidden" value="{$user}" />会员账号 : <input id="user" name="user" type="text"> <input name="" type="button" id="btn" value="搜索">
+	<span id="daishu"></span></form></div>
     <div class="content_wrap">
 	<div class="zTreeDemoBackground ">
 		<ul id="treeDemo" class="ztree"></ul>

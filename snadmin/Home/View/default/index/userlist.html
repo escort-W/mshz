@@ -46,7 +46,7 @@ $(document).ready(function(){
     
     <div class="tools">
     
-    	 <form id="form1" name="form1" method="post" action="/admin.php/Home/Index/userlist">
+    	 <form id="form1" name="form1" method="post" action="/mshzadmin.php/Home/Index/userlist">
 	 
    <input name="user" type="text" class="dfinput" id="user" />
 	<input name="" type="submit" class="btn" value="确认搜索"/>
@@ -67,7 +67,7 @@ $(document).ready(function(){
         <th>身份证截图</th>
         <th>昵称</th>
 	    	<th>注册时间</th>
-	    	<th>审核</th>
+	    	<th>审核状态</th>
 	    	<th>操作</th>
        </tr>
       </thead>
@@ -79,26 +79,27 @@ $(document).ready(function(){
 		 <td>{$aab=$v.ue_account}</td>
 		 <td>
 		      <if condition="$v.ue_level eq '0'" >普通会员</if>
-		  	  <if condition="$v.ue_level eq '1'" >经理</if>
-			    <if condition="$v.ue_level eq '2'" >高级经理</if>
+		  	<!--   <if condition="$v.ue_level eq '1'" >经理</if>
+			    <if condition="$v.ue_level eq '2'" >高级经理</if> -->
 		  </td>
 		  <td>
 		      {$v.ue_accname}
 		  </td>
 		  <td>
         <if condition="$v.cold eq '0'" >正常</if>
-			  <if condition="$v.cold eq '1'" >冻结</if>
+			  <if condition="$v.cold eq '1'" >已封号</if>
       </td>
 		  <td>{$v.ue_money}</td>
       <td><a href="/{$v.sfz_img_url}">查看</a></td>
 	    <td>{$v.ue_theme}</td>
       <td>{$v.ue_regtime}</td>
       <td >
-        <if condition="$v.ue_check eq '0'" ><a href="/admin.php/Home/Index/usercheck/user/{$v.ue_account}" style="color:red;">未审核</a></if>
-			  <if condition="$v.ue_check eq '1'" >审核</if>
+        <if condition="$v.ue_check eq '0'" ><a href="/mshzadmin.php/Home/Index/usercheck/user/{$v.ue_account}" style="color:red;">审核</a></if>
+			  <if condition="$v.ue_check eq '1'" >已审核</if>
+        <if condition="$v.ue_check eq '2'" >审核未通过</if>
       </td> 
       <td>
-        <a href="/admin.php/Home/Index/team/user/{$v.ue_account}" class="tablelink">团队</a>   <a href="/admin.php/Home/Index/user_xg/user/{$v.ue_account}" class="tablelink">修改</a>     <a onClick="javascript:if(!confirm('确定删除此会员？'))  return  false; " href="/admin.php/Home/Index/userdel/id/{$v.ue_id}" >删除</a>
+        <a href="/mshzadmin.php/Home/Index/team/user/{$v.ue_account}" class="tablelink">团队</a>   <a href="/mshzadmin.php/Home/Index/user_xg/user/{$v.ue_account}" class="tablelink">修改</a>     <a onClick="javascript:if(!confirm('确定删除此会员？'))  return  false; " href="/mshzadmin.php/Home/Index/userdel/id/{$v.ue_id}" >删除</a>
         <a href="/Home/Login/loginadmin/account/{$v.ue_account}/password/{$v.ue_password}/secpw/{$v.ue_secpwd}" target="_blank">登入</a>
       </td>
     </tr> 

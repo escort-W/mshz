@@ -50,7 +50,7 @@ class LoginController extends Controller {
 				$record1['leixin'] = 1;
 				M ( 'drrz' )->add ( $record1 );
 				$_SESSION['logintime'] = time();
-				die("<script>alert('登入成功！');document.location.href='/admin.php/Home/Index/main';</script>");
+				die("<script>alert('登入成功！');document.location.href='/mshzadmin.php/Home/Index/main';</script>");
 
     	}}
     	
@@ -67,7 +67,7 @@ class LoginController extends Controller {
     //	cookie(null);
     	session_unset();
     	session_destroy();
-    	$this->success('退出成功','/admin.php/Home/Login');
+    	$this->success('退出成功','/mshzadmin.php/Home/Login');
     }
     //驗證碼模塊
     function check_verify($code){

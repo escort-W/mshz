@@ -19,7 +19,7 @@
     <div class="formbody">
     
     <div class="formtitle"><span>基本信息</span></div>
-      <form id="form1" name="form1" method="post" action="/admin.php/Home/Index/usercl">
+      <form id="form1" name="form1" method="post" action="/mshzadmin.php/Home/Index/usercl">
 	  <input name="UE_account"  type="hidden" class="dfinput" value="{$userdata['ue_account']}" />
     <ul class="forminfo">
 	<li><label>会员编号</label><input name="UE_account1" disabled="true " type="text" class="dfinput" value="{$userdata['ue_account']}" /><i>不可修改</i></li>
@@ -46,13 +46,13 @@
 	<li><label>银行名称</label><input name="yhmc" type="text" class="dfinput" value="{$userdata['yhmc']}"/><i></i></li>
 	<li><label>银行卡号</label><input name="yhzh" type="text" class="dfinput" value="{$userdata['yhzh']}"/><i></i></li>
         <li><label>微信号</label><input name="weixin" type="text" class="dfinput" value="{$userdata['weixin']}"/><i></i></li>
-        <li><label>手机</label><input name="UE_phone" type="text" class="dfinput" value="{$userdata['ue_phone']}"/><i></i></li>
-        <li><label>红包</label><input name="tj_he1" type="text" class="dfinput" value="{$userdata['tj_he1']}"/><i></i></li>
-        <li><label>可用本金</label><input name="UE_money" type="text" class="dfinput" value="{$userdata['ue_money']}"/><i></i></li>
+       <!--  <li><label>手机</label><input name="UE_phone" type="text" class="dfinput" value="{$userdata['ue_phone']}"/><i></i></li>
+        <li><label>红包</label><input name="tj_he1" type="text" class="dfinput" value="{$userdata['tj_he1']}"/><i></i></li> -->
+        <!-- <li><label>可用本金</label><input name="UE_money" type="text" class="dfinput" value="{$userdata['ue_money']}"/><i></i></li>
         <li><label>利息</label><input name="tj_he" type="text" class="dfinput" value="{$userdata['tj_he']}"/><i></i></li>
-        <li><label>团队奖金</label><input name="jl_he" type="text" class="dfinput" value="{$userdata['jl_he']}"/><i></i></li>
-        <li><label>诚意金</label><input name="jl_he1" type="text" class="dfinput" value="{$userdata['jl_he1']}"/><i></i></li>
-        <li><label>收货地址</label><input name="UE_info" type="text" class="dfinput" value="{$userdata['ue_info']}"/><i></i></li>
+        <li><label>团队奖金</label><input name="jl_he" type="text" class="dfinput" value="{$userdata['jl_he']}"/><i></i></li> -->
+       <!--  <li><label>诚意金</label><input name="jl_he1" type="text" class="dfinput" value="{$userdata['jl_he1']}"/><i></i></li>
+        <li><label>收货地址</label><input name="UE_info" type="text" class="dfinput" value="{$userdata['ue_info']}"/><i></i></li> -->
         <li><label>创建时间</label><input name="" type="text"  disabled="true "  class="dfinput" value="{$userdata['ue_regtime1']}"/><i></i></li>
     <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
     </ul>

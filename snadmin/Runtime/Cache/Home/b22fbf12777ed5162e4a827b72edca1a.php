@@ -44,7 +44,7 @@
 <?php echo($message); ?>
 <?php }else{?>
 <?php echo($error); ?>
-<?php }?></h3><!--<img src="/assets/images/loading-bars.svg" width="64" height="64" />--> </br>  系统将在 <b id="wait"><?php echo($waitSecond); ?></b> 秒后自动跳转,或者点击 <a  id="href" href="<?php echo($jumpUrl); ?>">这里</a> 手动跳转</div> 
+<?php }?></h3><!--<img src="/assets/images/loading-bars.svg" width="64" height="64" />--> </br>  The system will automatically return in <b id="wait"><?php echo($waitSecond); ?></b> seconds,or click <a  id="href" href="<?php echo($jumpUrl); ?>">Here</a> to return</div> 
     </div>
 	<script type="text/javascript">
 (function(){

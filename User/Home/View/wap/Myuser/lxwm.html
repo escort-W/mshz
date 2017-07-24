@@ -1,0 +1,540 @@
+<!doctype html>
+<html><script src="/js/layer/jquery.min.js"></script>
+<script src="/User/Shop/View/wap/index/js/jquery.js"></script>
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="/assets/vendor/metisMenu/dist/metisMenu.css">
+<link rel="stylesheet" href="/assets/vendor/animate.css/animate.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/assets/vendor/sweetalert/lib/sweet-alert.css">
+<link rel="stylesheet" href="/assets/vendor/toastr/build/toastr.min.css">
+
+
+<!-- App styles -->
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/helper.css">
+<link rel="stylesheet" href="/assets/styles/style.css">
+
+<script src="/cssmmm/jquery.min.js"></script>
+<script src="/cssmmm/jquery-ui.min.js"></script>
+<script src="/cssmmm/jquery.slimscroll.min.js"></script>
+<script src="/cssmmm/bootstrap.min.js"></script>
+<script src="/cssmmm/jquery.flot.js"></script>
+<script src="/cssmmm/jquery.flot.resize.js"></script>
+<script src="/cssmmm/jquery.flot.pie.js"></script>
+<script src="/cssmmm/curvedLines.js"></script>
+<script src="/cssmmm/index.js"></script>
+<script src="/cssmmm/metisMenu.min.js"></script>
+<script src="/cssmmm/icheck.min.js"></script>
+<script src="/cssmmm/jquery.peity.min.js"></script>
+<script src="/cssmmm/index(1).js"></script>
+<script src="/cssmmm/sweet-alert.min.js"></script>
+<script src="/cssmmm/toastr.min.js"></script>
+<script src="/cssmmm/jquery.countdown.min.js"></script>
+<script src="/cssmmm/layer.js"></script>
+<!--导航-->
+<!-- <script type="text/javascript" src="/cssmmm/SuperSlide.2.1.js"></script> -->
+
+<!--客服QQ-->
+<link href="/css/sucaijiayuan.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.hhService.js"></script>
+<script type="text/javascript">$(function(){$("#hhService").fix({float:'right',minStatue:false,skin:'green',durationTime:300})});</script>
+
+
+<!-- App scripts -->
+<script src="/cssmmm/homer.js"></script>
+<script src="/cssmmm/alert.js"></script>
+<script src="/cssmmm/charts.js"></script>
+<script type="text/javascript" src="/cssmmm/socket.io.js"></script>
+<!-- Page title -->
+<title>民生互助</title>
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- Vendor styles -->
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="/assets/vendor/metisMenu/dist/metisMenu.css">
+<link rel="stylesheet" href="/assets/vendor/animate.css/animate.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/assets/vendor/sweetalert/lib/sweet-alert.css">
+<link rel="stylesheet" href="/assets/vendor/toastr/build/toastr.min.css">
+
+
+<!-- App styles -->
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/helper.css">
+<link rel="stylesheet" href="/assets/styles/style.css">
+
+
+
+
+
+<script type="text/javascript" >
+function ReImgSize(){ 
+for (j=0;j<document.images.length;j++) 
+{ 
+document.images[j].width=(document.images[j].width>420)?"420":document.images[j].width; 
+} 
+}
+</script>
+<style>
+input{border:0 solid #000;background:#FFF;}
+img{ 
+max-width:100%;height:auto; 
+} 
+body{padding-bottom:66px;background:#fff;}
+body,h1,dl{margin:0;}
+dd{margin:0;}
+a{ text-decoration:none;color:#FFF;}
+*{ font-family:"微软雅黑";}
+.clearfix{ clear:both;}
+ body,dd,dt,dl{margin:0;}
+dd,dt{padding:0;}
+.clearfix{clear:both;}
+span{display:block;}
+*{font-family:"微软雅黑"}
+a,img{display:block;} 
+
+ul li{list-style: none;}
+
+
+
+
+
+
+.top{background:#12b8f6;position:fixed;left:0;top:0;width:100%;box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.35);
+
+  background-image: -moz-linear-gradient( 90deg, rgb(95,64,26) 0%, rgb(199,133,52) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(95,64,26) 0%, rgb(199,133,52) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(95,64,26) 0%, rgb(199,133,52) 100%);
+}
+
+.top_nav{width:96%;margin:0 auto;}
+.logo{float:left;}
+.right_button{float:right;}
+.right_button input{font-size:24px; font-weight:bold;border:#333 1px solid; border-radius:6px;margin-top:6px;height:28px;line-height:24px;background:#eae7e7;}
+
+.two_nav{width:100%;border-bottom:1px #333CCC solid;display:none;}
+.two_nav1{width:96%;margin:0 auto;}
+.guanli h1{font-size:16px;line-height:38px;color:#FFF;}
+.tuijian h1{font-size:16px;line-height:38px;color:#FFF;}
+.guanli a{font-size:16px;line-height:30px;}
+.tuijian a{font-size:14px;line-height:16px;display:block;}
+
+
+.bannerBox{width:100%;margin-top:42px;}
+.contentBox{width:100%;margin:0 auto;}
+.small_box{width:48%;float:left;border:#000 1px solid;margin:0 1px;margin-bottom:2px;}
+
+.small_box dd,.small_box dt{font-size:12px;}
+.small_box dd{color:#F00;}
+.small_box dt{color:#666;}
+.small_box span{background-color:#FFF;width:100%;}
+.hBox dl{padding:0;margin:0;}
+.hBox dt{padding:0;margin:0;font-size:10px;margin-left:9px;}
+
+
+.col-sm-9 input{border-color: #666!important;}
+
+
+.weibu{ z-index: 999;    background:#4e89da;position:fixed;left:0;bottom:0;width:100%; text-align: center;height: 60px;  box-shadow: 0px -2px 10px #ccc; }
+.weibu ul{margin: 0;padding: 0;}
+.weibu ul li{float: left;width: 25%;}
+.weibu ul li a{display: block; width: 100%;height: 100%;}
+.weibu ul li a img{height: 36px;margin-top: 4px;display: -webkit-inline-box;}
+.weibu ul li a p{line-height: 20px;color: #336183;}
+.tuijian a{font-size:14px;line-height:16px;display:block;margin-top: 4px;background: rgb(51, 97, 131);border-radius: 10px;}
+.tuijian h1{padding: 4px;margin: 0;text-align: center;line-height: 28px;}
+.clr{clear: both;}
+
+.center{width:96%;margin:0 auto;}
+.center a{width:20%;float:left; text-align:center;}
+/*.pages{width:100.5%;padding:10px 0px;clear:both;}
+.pages li{float:left;margin:0px 5px;} 
+.pages a{color:#09f;margin:0px 2px;} */
+</style>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="top" style="z-index: 10000;background: none; box-shadow: none;text-align: center;">
+
+  <div class="top_nav" style="background: #4e89da;width:100%;">
+  <small class="text-muted" style="color:#FFF;font-size:16px;margin-top:6px;margin-bottom:6px;line-height:42px;">民生互助</small>
+      <!-- <div class="logo">
+          <img >
+        </div> -->
+        <div class="right_button" style="position: fixed;top: 0; right:10px;">
+        <a href="#" onClick="javascript:history.back(-1);" style="position: fixed;top: 5px;left: 10px;display:block;width:32px;height:32px;"><img src="/cssmmm/back.png" alt=""></a>
+          <h1 style="margin:0;display: none;"><img src="/cssmmm/clo.png" alt="" style="position: fixed;top: 5px;right: 10px;"><input name="" type="button"  value="" style="border:none;background: none;"></h1>
+  <h8><img src="/cssmmm/list.png" alt="" style="position: fixed;top: 5px;right: 10px;"><input name="" type="button"  value="" style="
+  border:none;background: none;"></h8>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="two_nav" style="width:30%;margin-left:70%;border:none;">
+      <div class="two_nav1">
+       <!-- <div class="guanli">
+          <h1>管理组织</h1>
+          <a href="tuijian.html">推荐列表</a>
+            <a href="yonghuqun.html">我的用户群</a>
+        </div> -->
+            <div class="tuijian">
+             <a href="/Home/Info/pin"><h1>激活码</h1></a>
+                <a href="/Home/Myuser/wdzh"><h1>我的团队</h1></a>
+                <a href="/Home/Info/jihuo"><h1>会员激活</h1></a>
+                <a href="/Home/Info/ppdd_lists"><h1>完成订单</h1></a>
+                <a href="/Home/Index/reg"><h1>注册</h1></a>
+                <!-- <a href="/Home/Info/rob_deal"><h1>抢单池</h1></a> -->
+                <a href="/Home/Reghub/censor_pdb"><h1>排单币</h1></a>
+                <a href="/Home/Info/grsz"><h1>个人资料</h1></a>
+                <a href="/Home/Info/xgmm"><h1>修改密码</h1></a>
+                <a href="/Home/Info/cwmx"><h1>财务管理</h1></a>
+                <a href="/Home/Myuser/lxwm"><h1>联系我们</h1></a>
+            </div>
+            
+       <!-- <div class="shouqi0"><input name="" type="button"  value="∧"></div>-->
+    </div>
+    </div>
+</div>
+
+
+
+        
+        
+        
+        
+
+
+<div class="bannerBox">
+     	<a href="/">
+            <img src="/img/banner.png" width="100%">
+
+    	</a>
+		 <div class="yuanBox">
+
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
+
+<div class="contentBox">
+
+                <!--<div class="hBox">-->
+                    <!--<dl>商家推荐</dl>-->
+                    <!--<dt>以真心换真心，给您最正确的选择！</dt>-->
+            <!---->
+                    <!--<div class="clearfix"></div>-->
+                <!--</div>-->
+                
+                <div class="bigBox">
+                    <div class="smallBox">
+					<!--<empty name="shop_hot">-->
+					<!--<div style="width:100%;padding:50px;text-align:center;font-size:16px;color:#DDD">暂无数据</div>-->
+					<!--<else/>-->
+                    <!--<foreach name="shop_hot" item="value">-->
+                        <!--<div class="small_box">-->
+                            <!--<a href="__MODULE__/index/project?id={$value.id}"><img width="300" height="200" src="{$value.imagepath}"></a>-->
+                            <!--<span>-->
+                                <!--<dt style="margin-left:4px">{$value.name}</dt>-->
+                                <!--<dd style="margin-right:4px"><strong>￥:{$value.price}元</strong></dd>-->
+                            <!--</span>-->
+                        <!--</div>                        -->
+                    <!--</foreach>-->
+					<!--</empty>-->
+
+
+
+                        <div id="" style="min-height: 856px;background-color: white">
+
+
+                            <div class="normalheader">
+                                <div class="hpanel">
+                                    <div class="panel-body" style="padding: 0;"> <a class="small-header-action" href="">
+                                        <!--<div class="clip-header"> <i class="fa fa-arrow-up"></i> </div>-->
+                                    </a>
+                                        <div id="hbreadcrumb" class="pull-right m-t-lg">
+
+                                            <script>
+
+                                                if(navigator.platform.indexOf('Win32')==-1){
+
+                                                    $("#qq_service").html('<span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3379069449&site=qq&menu=yes"><img title="3379069449"width="50" src="/images/QQ.png"></span>'
+                                                            +'<span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1792921844&site=qq&menu=yes"><img title="1792921844"width="50" src="/images/QQ.png"></span>'
+                                                            +'<span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3113859584&site=qq&menu=yes"><img title="3113859584"width="50" src="/images/QQ.png"></span>'
+                                                            +'<span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2693516668&site=qq&menu=yes"><img title="2693516668"width="50" src="/images/QQ.png"></span>');
+
+                                                }
+                                            </script>
+                                        </div>
+                                        <h2 class="font-light m-b-xs"> 联系我们</h2>
+                                        <small>
+
+                                            在这里，你可以提交你所面对的疑难，您的请求我们将会尽快的处理。我们的服务时间是在周一至周六，北京/香港时间 10:00 到 17:00。
+                                        </small> </div>
+                                </div>
+                            </div>
+
+
+                            <div class="content">
+
+                                <div class="row">
+                                    <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+                                        <div class="hpanel" id="aa">
+
+                                            <div class="col-lg-12"  style="padding-left: 0;padding-right: 0;">
+                                                <div class="hpanel">
+                                                    <div class="panel-heading">
+                                                        <!--<div class="panel-tools">-->
+                                                            <!--<a class="showhide"><i class="fa fa-chevron-up"></i></a>-->
+                                                            <!--<a class="closebox"><i class="fa fa-times"></i></a>-->
+                                                        <!--</div>-->
+                                                        提交问题
+                                                    </div>
+                                                    <div class="panel-body" style="padding: 0;">
+                                                        <form action="{:U('Home/Myuser/lxwmcl')}" name="xgmm" id="xgmm" method="post" enctype="multipart/form-data" >
+
+
+
+
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label">问题</label>
+
+                                                                <div class="col-sm-9">
+
+                                                                    <select class="form-control m-b" name="otlylx" id="otlylx" style="border-color: #666!important;">
+                                                                        <option value="系统错误">系统错误</option>
+                                                                        <option value="参与者拒绝汇款">参与者拒绝汇款</option>
+                                                                        <!--<option value="经理操作不合理">经理操作不合理</option>-->
+                                                                        <option value="接款者不愿意确认收款">接款者不愿意确认收款</option>
+                                                                        <option value="汇款时，对方资料与系统提供的有差别">汇款时，对方银行资料与系统提供的有差别</option>
+                                                                        <option value="参与者账号被封锁了">参与者账号被封锁了</option>
+                                                                        <option value="未确认收款">未确认收款</option>
+                                                                        <option value="错误的操作">错误的操作</option>
+                                                                        <option value="无法接受手机短信">无法接受手机短信</option>
+                                                                        <option value="无法提交预约申请">无法提交提供帮助申请</option>
+                                                                        <option value="无法提交提现申请">无法提交接收帮助申请</option>
+                                                                        <option value="系统显示的金额有误">系统显示的金额有误</option>
+                                                                        <!--<option value="更换邮箱">更换邮箱</option>-->
+                                                                        <option value="更换手机号码">更换手机号码</option>
+                                                                        <option value="举报诈骗行为">举报诈骗行为</option>
+                                                                        <option value="无法更新汇款状态">无法更新汇款状态</option>
+                                                                        <option value="无法更新接款状态">无法更新接款状态</option>
+                                                                        <option value="未获得款项">未获得款项</option>
+                                                                        <option value="我需要更换我的推荐人">我需要更换我的经理</option>
+                                                                    </select>
+
+                                                                </div>
+                                                            </div>
+                                                            <!--<br>-->
+                                                            <!--<br>-->
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label" style="line-height: 0px;">标题</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <input type="text" required name="lybt" id="lybt" class="form-control">
+
+                                                                </div>
+                                                            </div>
+                                                            <!--<br>-->
+                                                            <!--<br>-->
+
+                                                            <div class="form-group">
+                                                                <label class="col-sm-3 control-label" style="line-height: 0px;">内容</label>
+
+                                                                <div class="col-sm-9">
+                                                                    <!--<br>-->
+
+                                                                    <textarea rows="4" required name="lynr" id="lynr" class="form-control" style="width: 100%;border-color: #666!important;"></textarea>
+
+                                                                </div>
+                                                            </div>
+                                                            <!--<br>-->
+                                                            <!--<br>-->
+
+
+                                                            <link rel="stylesheet" type="text/css" href="/js/xz/css.css" />
+                                                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+                                                            <div style="font-size:9pt;">
+                                                                <div align="center">
+                                                                    <!--<br><img src="" style="display:inline-block;" width='140' height='140' id='face-img'/>-->
+                                                                   <!--  <input type="file" name='face' id='face'/> -->
+
+                                                                    <!-- <a class="btn btn-primary btn-sm" id="btn">上传图片</a>　　-->
+
+                                                                    <input type="hidden" name='face180' value=''/>　　
+                                                                    <script type="text/javascript" src='__PUBLIC__/Js/jquery-1.7.2.min.js'></script>
+                                                                    <link rel="stylesheet" href="__PUBLIC__/Uploadify/uploadify.css"/>
+                                                                    <script type="text/javascript" src='__PUBLIC__/Uploadify/jquery.uploadify.min.js'></script>
+                                                                    <script type='text/javascript'>
+
+                                                                        var PUBLIC = '__PUBLIC__';
+                                                                        var uploadUrl = '{:U("Upload/uploadFace")}';
+                                                                        //alert(uploadUrl);
+                                                                        var ROOT = '__ROOT__';
+                                                                        var sid = "{$ssid}";
+                                                                        //上传插件
+                                                                        $(function() {
+
+                                                                            $('#face').uploadify({
+                                                                                swf : PUBLIC + '/Uploadify/uploadify.swf',	//引入Uploadify核心Flash文件
+                                                                                uploader : uploadUrl,	//PHP处理脚本地址
+                                                                                width : 120,	//上传按钮宽度
+                                                                                height : 30,	//上传按钮高度
+                                                                                buttonImage : PUBLIC + '/Uploadify/browse-btn.png',	//上传按钮背景图地址
+                                                                                fileTypeDesc : 'Image File',	//选择文件提示文字
+                                                                                fileTypeExts : '*.jpeg; *.jpg; *.png; *.gif',	//允许选择的文件类型
+                                                                                formData : {'session_id' : sid},
+                                                                                //上传成功后的回调函数
+                                                                                onUploadSuccess : function (file, data, response) {
+
+                                                                                    eval('var data = ' + data);
+                                                                                    if (data.status) {
+                                                                                        $('#face-img').attr('src', ROOT + '/Uploads/' + data.path);
+                                                                                        $('input[name=face180]').val('/Uploads/'+data.path);
+                                                                                    } else {
+                                                                                        alert(data.msg);
+                                                                                    }
+                                                                                }
+                                                                            });
+
+
+                                                                        });
+                                                                    </script>
+                                                                </div>
+                                                                <ul id="ul_pics" class="ul_pics clearfix"></ul>
+                                                            </div>
+
+                                                            <script type="text/javascript" src="/plupload/plupload.full.min.js"></script>
+                                                            <!-- <script type="text/javascript" src="/js/xz/sucaihuo.js"></script><script type="text/javascript" src="cssmmm/jquery.min.js"></script>-->
+
+                                                            <div class="form-group">
+                                                                <div class="col-sm-8 col-sm-offset-2">
+                                                                    <input name="" class="btn btn-primary pull-right" type="submit" id="btn" value="提交">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>                                <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+                                    <div class="hpanel">
+                                        <div class="panel-heading">
+                                            <!--<div class="face-img">-->
+                                                <!--<a class="showhide"><i class="fa fa-chevron-up"></i></a>-->
+                                                <!--<a class="closebox"><i class="fa fa-times"></i></a>-->
+                                            <!--</div>-->
+                                            问题记录
+                                        </div>
+                                        <div class="panel-body" style="padding: 0;">
+                                            <div class="table-responsive">
+                                                <div id="example_wrapper" class="dataTables_wrapper no-footer">
+                                                    <!--<div class="dataTables_length" id="example_length">-->
+                                                        <!--<label>显示 <select name="example_length" aria-controls="example" class="">-->
+                                                            <!--<option value="10">10</option>-->
+                                                            <!--<option value="25">25</option>-->
+                                                            <!--<option value="50">50</option>-->
+                                                            <!--<option value="100">100</option></select> 行</label></div>-->
+                                                    <!--<div id="example_filter" class="dataTables_filter">-->
+                                                        <!--<label>查询:<input type="search" class="" placeholder="" aria-controls="example"></label></div>-->
+                                                    <table cellpadding="1" id="example" cellspacing="1" class="table table-bordered table-striped cus_datatable dataTable no-footer" role="grid" aria-describedby="example_info">
+                                                    <thead>
+                                                    <tr role="row" style="background:#336183;color: #fff;">
+                                                        <th class="sorting_desc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" aria-label="编号: activate to sort column ascending" style="width: 61px;">留言时间</th>
+                                                        <!--<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="时间: activate to sort column ascending" style="width: 61px;">留言标题</th>-->
+                                                        <!--<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="问题类别: activate to sort column ascending" style="width: 104px;">问题类别</th>-->
+                                                        <!--<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="发件人: activate to sort column ascending" style="width: 83px;">留言内容</th>-->
+                                                        <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="状态: activate to sort column ascending" style="width: 62px;">状态</th>
+                                                        <!--<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="操作: activate to sort column ascending" style="width: 62px;">回复内容</th>-->
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <script>
+                                                        $(function(){
+                                                            $('.replay').click(function(){
+                                                                var id = $(this).attr('data-id');
+                                                                //iframe层
+                                                                layer.open({
+                                                                    type: 2,
+                                                                    title: '详情页',
+                                                                    shadeClose: true,
+                                                                    shade: 0.8,
+                                                                    area: ['300px', '80%'],
+                                                                    content: '/Home/Index/messageinfo/id/'+id //iframe的url
+                                                                });
+                                                            });
+                                                        })
+
+                                                    </script>
+
+                                                    <foreach name='list' item='v'>
+
+                                                        <tr role="row" class="odd">
+                                                            <td class="sorting_1">{$v.ma_time}</td>
+                                                            <!--<td>{$v.ma_theme}</td>-->
+                                                            <!--<td>{$v.ma_otherinfo}</td>-->
+                                                            <!--<td>{$v.ma_note}</td>-->
+                                                            <td>
+                                                                <if condition="$v.zt eq 1">
+                                                                    <span style="color: green" class="replay" data-id="{$v.ma_id}">已回复</span>
+                                                                    <else />
+                                                                    <span style="color: red" class="replay" data-id="{$v.ma_id}">未回复</span>
+                                                                </if>
+                                                            </td>
+                                                            <!--<td>详情</td>-->
+                                                            <!--<td>{$v.ma_replytime}</td>-->
+                                                            <!--<td>{$v.ma_reply}</td>-->
+                                                        </tr>
+                                                    </foreach>
+                                                    </tbody>
+                                                </table>
+                                                    <div class="dataTables_paginate paging_simple_numbers" id="example_paginate">{$page}</div></div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <form>
+                            </form>
+
+                        </div>
+
+                            <div class="clearfix"></div>                  
+                      </div>
+                  </div>
+                  <div class="pages" style="margin:50px 0 ;text-align: center;">{$show}</div>
+
+    <div class="weibu">
+        <ul>
+            <li><a href="/Home/Index/home"><img src="/img/shouye_x.png" alt=""/><p style="color:white;font-weight: bolder">首页</p></a></li>
+            <!--<li><a href="http://www.yunzhifupay.cn/M/"><img src="/cssmmm/nav2.png" alt=""/><p>商城</p></a></li>-->
+            <li><a href="/Home/index/news.html"><img src="/img/gonggao_x.png" alt=""/><p style="color:white;font-weight: bolder">公告</p></a></li>
+            <li><a href="/Home/index/jyxx.html"><img src="/img/yuyue_y.png" alt=""/><p style="color:white;font-weight: bolder">预约列表</p></a></li>
+            <li><a href="/Home/Login/index.html"><img src="/img/tuichu_x.png" alt=""/><p style="color:white;font-weight: bolder">退出</p></a></li>
+        </ul>
+        <div class="clr"></div>
+    </div>
+</body>
+
+</html>

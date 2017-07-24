@@ -20,7 +20,7 @@
     <div class="formbody">
     <div class="formtitle"><span>基本信息</span></div>
     <div><?php $toggleshop = M('system')->where(['SYS_ID'=>'1'])->getField('toggleshop');?>
-      <form id="form1" name="form1" method="post" action="/admin.php/Shop/Index/toggleShop">
+      <form id="form1" name="form1" method="post" action="/mshzadmin.php/Shop/Index/toggleShop">
     <ul class="forminfo">
      <li><label>开启商城：<input name="toggle" type="radio" class="" value="0" <?php if($toggleshop == 0) echo 'checked="checked"' ?> /></label>
      <i></i></li>
@@ -30,7 +30,7 @@
     </ul>
       </form>
     </div>
-      <form id="form1" name="form1" method="post" action="/admin.php/Shop/Index/index">
+      <form id="form1" name="form1" method="post" action="/mshzadmin.php/Shop/Index/index">
     <ul class="forminfo">
 	 <li><label>类别名称：</label><input name="name" type="text" class="dfinput" id="user" />
 	 <i></i></li>
@@ -58,10 +58,7 @@
 		<foreach name='list' item='v'>
         <tr>
 		 <td>{$v.id}</td>
-		 <td>
-		     <input style='border:1px solid #DDD;height:20px;text-indent:10px;' value="{$v.name}">
-		     <a onclick="edit(this)" style='margin-left:10px;cursor:pointer;'>修改</a>
-		 </td>
+		 <td><input style='border:1px solid #DDD;height:20px;text-indent:10px;' value="{$v.name}"><a onclick="edit(this)" style='margin-left:10px;cursor:pointer;'>修改</a></td>
 		 <td>{$v.addtime|date="Y-m-d H:i:s",###}</td>
 		 <td><a onclick="del(this)" style='margin-left:10px;cursor:pointer;'>删除</a></td>
 		

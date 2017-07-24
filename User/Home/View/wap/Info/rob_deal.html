@@ -1,0 +1,1266 @@
+<!doctype html>
+<html><script src="/js/layer/jquery.min.js"></script>
+<script src="/User/Shop/View/wap/index/js/jquery.js"></script>
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="/assets/vendor/metisMenu/dist/metisMenu.css">
+<link rel="stylesheet" href="/assets/vendor/animate.css/animate.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/assets/vendor/sweetalert/lib/sweet-alert.css">
+<link rel="stylesheet" href="/assets/vendor/toastr/build/toastr.min.css">
+
+
+<!-- App styles -->
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/helper.css">
+<link rel="stylesheet" href="/assets/styles/style.css">
+
+<script src="/cssmmm/jquery.min.js"></script>
+<script src="/cssmmm/jquery-ui.min.js"></script>
+<script src="/cssmmm/jquery.slimscroll.min.js"></script>
+<script src="/cssmmm/bootstrap.min.js"></script>
+<script src="/cssmmm/jquery.flot.js"></script>
+<script src="/cssmmm/jquery.flot.resize.js"></script>
+<script src="/cssmmm/jquery.flot.pie.js"></script>
+<script src="/cssmmm/curvedLines.js"></script>
+<script src="/cssmmm/index.js"></script>
+<script src="/cssmmm/metisMenu.min.js"></script>
+<script src="/cssmmm/icheck.min.js"></script>
+<script src="/cssmmm/jquery.peity.min.js"></script>
+<script src="/cssmmm/index(1).js"></script>
+<script src="/cssmmm/sweet-alert.min.js"></script>
+<script src="/cssmmm/toastr.min.js"></script>
+<script src="/cssmmm/jquery.countdown.min.js"></script>
+<!--导航-->
+<!-- <script type="text/javascript" src="/cssmmm/SuperSlide.2.1.js"></script> -->
+
+<!--客服QQ-->
+<link href="/css/sucaijiayuan.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.hhService.js"></script>
+<script type="text/javascript">$(function(){$("#hhService").fix({float:'right',minStatue:false,skin:'green',durationTime:300})});</script>
+
+
+<!-- App scripts -->
+<script src="/cssmmm/homer.js"></script>
+<script src="/cssmmm/alert.js"></script>
+<script src="/cssmmm/charts.js"></script>
+<script type="text/javascript" src="/cssmmm/socket.io.js"></script>
+<!-- Page title -->
+<title>民生互助</title>
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- Vendor styles -->
+<link rel="stylesheet" href="/assets/vendor/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="/assets/vendor/metisMenu/dist/metisMenu.css">
+<link rel="stylesheet" href="/assets/vendor/animate.css/animate.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/assets/vendor/sweetalert/lib/sweet-alert.css">
+<link rel="stylesheet" href="/assets/vendor/toastr/build/toastr.min.css">
+
+
+<!-- App styles -->
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" href="/assets/fonts/pe-icon-7-stroke/css/helper.css">
+<link rel="stylesheet" href="/assets/styles/style.css">
+
+
+
+
+
+<script type="text/javascript" >
+function ReImgSize(){ 
+for (j=0;j<document.images.length;j++) 
+{ 
+document.images[j].width=(document.images[j].width>420)?"420":document.images[j].width; 
+} 
+}
+</script>
+<style>
+input{border:0 solid #000;background:#FFF;}
+img{ 
+max-width:100%;height:auto; 
+} 
+body{padding-bottom:66px;}
+body,h1,dl{margin:0;}
+dd{margin:0;}
+a{ text-decoration:none;color:#FFF;}
+*{ font-family:"微软雅黑";}
+.clearfix{ clear:both;}
+ body,dd,dt,dl{margin:0;}
+dd,dt{padding:0;}
+.clearfix{clear:both;}
+span{display:block;}
+*{font-family:"微软雅黑"}
+a,img{display:block;} 
+ul li{ list-style:none;}
+
+
+
+
+
+
+
+
+.top{background:#12b8f6;position:fixed;left:0;top:0;width:100%;box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.35);
+
+  background-image: -moz-linear-gradient( 90deg, rgb(95,64,26) 0%, rgb(199,133,52) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(95,64,26) 0%, rgb(199,133,52) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(95,64,26) 0%, rgb(199,133,52) 100%);
+}
+
+.top_nav{width:96%;margin:0 auto;}
+.logo{float:left;}
+.right_button{float:right;}
+.right_button input{font-size:24px; font-weight:bold;border:#333 1px solid; border-radius:6px;margin-top:6px;height:28px;line-height:24px;background:#eae7e7;}
+
+.two_nav{width:100%;border-bottom:1px #333CCC solid;}
+.two_nav1{width:96%;margin:0 auto;}
+.guanli h1{font-size:16px;line-height:38px;color:#FFF;}
+.tuijian h1{font-size:16px;line-height:38px;color:#FFF;}
+.guanli a{font-size:16px;line-height:30px;}
+.tuijian a{font-size:14px;line-height:16px;display:block;}
+.form-group input{border:1px solid #666!important;}
+
+.bannerBox{width:100%;margin-top:42px;}
+.contentBox{width:100%;margin:0 auto;}
+.small_box{width:48%;float:left;border:#000 1px solid;margin:0 1px;margin-bottom:2px;}
+
+.small_box dd,.small_box dt{font-size:12px;}
+.small_box dd{color:#F00;}
+.small_box dt{color:#666;}
+.small_box span{background-color:#FFF;width:100%;}
+.hBox dl{padding:0;margin:0;}
+.hBox dt{padding:0;margin:0;font-size:10px;margin-left:9px;}
+
+
+
+.weibu{ z-index: 999;    background:#4e89da;position:fixed;left:0;bottom:0;width:100%; text-align: center;height: 60px;  box-shadow: 0px -2px 10px #ccc; }
+.weibu ul li{float: left;width: 25%;}
+.weibu ul li a{display: block; width: 100%;height: 100%;}
+.weibu ul li a img{height: 36px;margin-top: 4px;display: -webkit-inline-box;}
+.weibu ul li a p{line-height: 20px;color: #336183;}
+.tuijian a{font-size:14px;line-height:16px;display:block;margin-top: 4px;background: rgb(51, 97, 131);border-radius: 10px;}
+.tuijian h1{padding: 4px;margin: 0;text-align: center;line-height: 28px;}
+.clr{clear: both;}
+.center{width:96%;margin:0 auto;}
+.center a{width:20%;float:left; text-align:center;}
+/*.pages{width:100.5%;padding:10px 0px;clear:both;}
+.pages li{float:left;margin:0px 5px;} 
+.pages a{color:#09f;margin:0px 2px;} */
+</style>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+<div class="top" style="z-index: 10000;background: none; box-shadow: none;text-align: center;">
+
+  <div class="top_nav" style="background: #4e89da;width:100%;">
+  <small class="text-muted" style="color:#FFF;font-size:16px;margin-top:6px;margin-bottom:6px;line-height:42px;">民生互助</small>
+      <!-- <div class="logo">
+          <img >
+        </div> -->
+        <div class="right_button" style="position: fixed;top: 0; right:10px;">
+        <a href="#" onClick="javascript:history.back(-1);" style="position: fixed;top: 5px;left: 10px;display:block;width:32px;height:32px;"><img src="/cssmmm/back.png" alt=""></a>
+          <h1 style="margin:0;display: none;"><img src="/cssmmm/clo.png" alt="" style="position: fixed;top: 5px;right: 10px;"><input name="" type="button"  value="" style="border:none;background: none;"></h1>
+  <h8><img src="/cssmmm/list.png" alt="" style="position: fixed;top: 5px;right: 10px;"><input name="" type="button"  value="" style="
+  border:none;background: none;"></h8>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="two_nav" style="width:30%;margin-left:70%;border: none;">
+      <div class="two_nav1">
+       <!-- <div class="guanli">
+          <h1>管理组织</h1>
+          <a href="tuijian.html">推荐列表</a>
+            <a href="yonghuqun.html">我的用户群</a>
+        </div> -->
+            <div class="tuijian">
+                <a href="/Home/Info/pin"><h1>激活码</h1></a>
+                <a href="/Home/Myuser/wdzh"><h1>我的团队</h1></a>
+                <a href="/Home/Info/jihuo"><h1>会员激活</h1></a>
+                <a href="/Home/Info/ppdd_lists"><h1>完成订单</h1></a>
+                <a href="/Home/Index/reg"><h1>注册</h1></a>
+                <!-- <a href="/Home/Info/rob_deal"><h1>抢单池</h1></a> -->
+                <a href="/Home/Reghub/censor_pdb"><h1>排单币</h1></a>
+                <a href="/Home/Info/grsz"><h1>个人资料</h1></a>
+                <a href="/Home/Info/xgmm"><h1>修改密码</h1></a>
+                <a href="/Home/Info/cwmx"><h1>财务管理</h1></a>
+                <a href="/Home/Myuser/lxwm"><h1>联系我们</h1></a>
+            </div>
+            
+       <!-- <div class="shouqi0"><input name="" type="button"  value="∧"></div>-->
+    </div>
+    </div>
+</div>
+
+
+        
+        
+        
+        
+
+
+<div class="bannerBox">
+     	<a href="/">
+            <img src="/img/banner.png" width="100%">
+
+    	</a>
+		 <div class="yuanBox">
+
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
+
+<div class="contentBox">
+
+                <!--<div class="hBox">-->
+                    <!--<dl>商家推荐</dl>-->
+                    <!--<dt>以真心换真心，给您最正确的选择！</dt>-->
+            <!---->
+                    <!--<div class="clearfix"></div>-->
+                <!--</div>-->
+                
+                <div class="bigBox">
+                    <div class="smallBox">
+					<!--<empty name="shop_hot">-->
+					<!--<div style="width:100%;padding:50px;text-align:center;font-size:16px;color:#DDD">暂无数据</div>-->
+					<!--<else/>-->
+                    <!--<foreach name="shop_hot" item="value">-->
+                        <!--<div class="small_box">-->
+                            <!--<a href="__MODULE__/index/project?id={$value.id}"><img width="300" height="200" src="{$value.imagepath}"></a>-->
+                            <!--<span>-->
+                                <!--<dt style="margin-left:4px">{$value.name}</dt>-->
+                                <!--<dd style="margin-right:4px"><strong>￥:{$value.price}元</strong></dd>-->
+                            <!--</span>-->
+                        <!--</div>                        -->
+                    <!--</foreach>-->
+					<!--</empty>-->
+
+
+
+                        <div id="" style="background-color: white">
+                            <div class="normalheader transition animated fadeIn" style="padding: 0px 20px 0px 20px;">
+                                <div class="hpanel">
+                                    <div class="panel-body" style="padding:0;">
+                                        <!--<a class="small-header-action" href="">-->
+                                            <!--<div class="clip-header">-->
+                                                <!--<i class="fa fa-arrow-up"></i>-->
+                                            <!--</div>-->
+                                        <!--</a>-->
+                                        <!-- 111 -->
+                                        <script src="/cssmmm/jquery.min.js"></script>
+                                        <link rel="stylesheet" href="__PUBLIC__/Uploadify/uploadify.css"/>
+                                        <script type="text/javascript" src='__PUBLIC__/Uploadify/jquery.uploadify.min.js'></script>
+                                        <script type='text/javascript'>
+
+                                            var PUBLIC = '__PUBLIC__';
+                                            var uploadUrl = '{:U("Upload/uploadFace")}';
+                                            var sid = "{$ssid}";
+                                            var ROOT = '__ROOT__';
+                                        </script>
+
+                                        <script type="text/javascript">
+                                            //上传插件
+                                            $(function() {
+
+                                                $('#face1').uploadify({
+                                                    swf : PUBLIC + '/Uploadify/uploadify.swf',  //引入Uploadify核心Flash文件
+                                                    uploader : uploadUrl,   //PHP处理脚本地址
+                                                    width : 120,    //上传按钮宽度
+                                                    height : 30,    //上传按钮高度
+                                                    buttonImage : PUBLIC + '/Uploadify/browse-btn.png', //上传按钮背景图地址
+                                                    fileTypeDesc : 'Image File',    //选择文件提示文字
+                                                    fileTypeExts : '*.jpeg; *.jpg; *.png; *.gif',   //允许选择的文件类型
+                                                    formData : {'session_id' : sid},
+                                                    //上传成功后的回调函数
+                                                    onUploadSuccess : function (file, data, response) {
+
+                                                        eval('var data = ' + data);
+                                                        if (data.status) {
+                                                            $('#face-img').attr('src', ROOT + '/Uploads/' + data.path);
+                                                            $('input[name=face180]').val('/Uploads/'+data.path);
+                                                        } else {
+                                                            alert(data.msg);
+                                                        }
+                                                    }
+                                                });
+
+
+                                            });
+                                        </script>
+
+                                        <script type="text/javascript">
+                                            <!--
+
+                                            $(document).ready(function(){
+                                                $(".click").click(function(){
+                                                    $(".tip").fadeIn(200);
+                                                });
+
+                                                $(".tiptop a").click(function(){
+                                                    $(".tip").fadeOut(200);
+                                                });
+
+                                                $(".sure").click(function(){
+                                                    $(".tip").fadeOut(100);
+                                                });
+
+                                                $(".cancel").click(function(){
+                                                    $(".tip").fadeOut(100);
+                                                });
+
+                                            });
+                                            //-->
+                                        </script>
+                                        <script type="text/javascript">
+                                            $(function(){
+                                                var height = $(document).height();
+                                                var height1 = $('#logo').height();
+                                                $('.profile-picture').height(height);
+                                                $('#wrapper').height(height+height1+20);
+                                            });
+
+                                        </script>
+                                        <!-- <script charset="utf-8" src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+                                        <script charset="utf-8" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+                                         -->
+                                        </head>
+
+
+                                        <body>
+                                        <label></label>
+
+                                        <!--<div id="hbreadcrumb" class="pull-right m-t-lg">-->
+                                            <!--<ol class="hbreadcrumb breadcrumb">-->
+                                                <!--<li><a href="">首页</a> </li>-->
+                                                <!--<li class="active">-->
+                                                    <!--<span><a>账号管理</a></span></li><li class="active">-->
+                                                <!--<span><a>个人资料</a></span>                        </li>-->
+                                            <!--</ol>-->
+                                        <!--</div>-->
+                                        <h2 class="font-light m-b-xs" style="margin:20px 0;">
+                                            抢单池               </h2>
+                                        
+                                        <table id="example" cellpadding="1" cellspacing="1" class="table table-bordered table-striped cus_datatable dataTable no-footer" width="100%" role="grid" aria-describedby="example_info"
+                                        style="width: 100%;">
+                                            <thead>
+                                                <tr role="row" style="background:#4F98CD;color:#fff;">
+                                                    <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                        aria-label="时间" style="height: 40px;line-height: 40px;">时间</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example"
+                                                        rowspan="1" colspan="1" aria-label="转账金额: activate to sort column ascending"
+                                                        style="height: 40px;line-height: 40px;">金额</th>      
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                                        aria-label="用户: activate to sort column ascending" style="height: 40px;line-height: 40px;">用户</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+                                                        aria-label="" style="height: 40px;line-height: 40px;">操作</th>
+                                                </tr>
+                                            </thead>
+                                                                                <tbody>
+                                                                                <volist name="list" id="v">
+                                                                                    <tr role="row" class="odd">
+                                                                                       <td>{$v.date}</td>
+                                                                                       <td>{$v.jb}</td>
+                                                                                       <td>{$v.user}</td>
+                                                                                       <td><a style="color: red;text-align: center;" href="rob_deal_cl/id/{$v.id}">抢</a></td>
+                                                                                    </tr>
+                                                                                </volist>
+
+                                                                                </tbody>
+                                                                            </table>
+
+
+
+
+                                       <!--  <table border="1">
+                                       <thead>
+                                           <volist name="list" id="v">
+                                               <tr>{$v.date}</tr>
+                                               <tr>{$v.jb}</tr>
+                                               <tr>{$v.user}</tr>
+                                               <tr><a style="color: red" href="rob_deal_cl/id/{$v.id}">抢</a></tr>
+                                           </volist>
+                                           </thead>
+                                       </table> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="">
+
+                                            <div class="hpanel">
+                                                <div class="panel-body">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+
+                            <!--table-->
+
+                            <!--table end-->
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="clearfix"></div>
+                    
+                        
+                      </div>
+                  </div>
+                  <div class="pages" style="margin:50px 0 ;text-align: center;">{$show}</div>
+
+
+
+    <div class="weibu">
+        <ul>
+            <li><a href="/Home/Index/home"><img src="/img/shouye_x.png" alt=""/><p style="color:white;font-weight: bolder">首页</p></a></li>
+            <!--<li><a href="http://www.yunzhifupay.cn/M/"><img src="/cssmmm/nav2.png" alt=""/><p>商城</p></a></li>-->
+            <li><a href="/Home/index/news.html"><img src="/img/gonggao_x.png" alt=""/><p style="color:white;font-weight: bolder">公告</p></a></li>
+            <li><a href="/Home/index/jyxx.html"><img src="/img/yuyue_y.png" alt=""/><p style="color:white;font-weight: bolder">预约列表</p></a></li>
+            <li><a href="/Home/Login/index.html"><img src="/img/tuichu_x.png" alt=""/><p style="color:white;font-weight: bolder">退出</p></a></li>
+        </ul>
+        <div class="clr"></div>
+    </div>
+
+
+    <style>
+        .weibu{ width: 100%;
+            overflow: hidden;}
+        .weibu ul{
+            float: left; width: 100%;
+            height: auto; margin:0px; padding:0px;}
+    </style>
+    <!-- <div class="weibu">
+    <div class="center">
+        <a href="/Home/Index/home">
+            <span>
+                <img>
+               <p>首页</p>
+            </span>
+        </a>
+        <a href="/Home/index/news.html">
+            <span>
+                <img>
+               <p>公告</p>
+            </span>
+        </a>
+        <a href="/Home/Myuser/lxwm">
+            <span>
+                <img>
+               <p>我们</p>
+            </span>
+        </a>
+        <a href="/shop/index/index">
+            <span>
+                <img>
+               <p>商城</p>
+            </span>
+        </a>
+        <a href="/Home/Login/index.html">
+            <span>
+                <img>
+               <p>退出</p>
+            </span>
+        </a>
+    </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">提供帮助</h4>
+
+                    <p class="text-warning">申请完成后，请等待系统随机分配受善需求</p>
+                </div>
+                <!-- deleted by skyrim -->
+                <!-- purpose: upper/lower limit -->
+                <!-- version: 3.0 -->
+                <!-- <form method="post" action="/Home/Index/tgbzcl" id="provide_help"> -->
+                <!-- deleted end -->
+                <!-- added by skyrim -->
+                <!-- purpose: upper/lower limit -->
+                <!-- version: 3.0 -->
+                <form method="post" onSubmit="return valid_help_range();" action="/Home/Index/tgbzcl" id="provide_help">
+                    <!-- added ends -->
+                    <div class="modal-body" style="text-align:center">
+
+                        <br>
+                        <label class="col-sm-12 control-label">支付方式</label>
+
+                        <div class="radio" align="left">
+
+                            <label> <input type="checkbox" value="1" class="ckbox" name="zffs1" checked="">银行支付</label><br>
+                            <label> <input type="checkbox" value="1" class="ckbox" name="zffs2" checked="">支付宝支付</label><br>
+                            <label> <input type="checkbox" value="1" class="ckbox" name="zffs3" checked="">微信支付</label><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label">提供帮助金额</label>
+
+                            <div class="col-sm-12" style="width:100%;text-align:center;font-size:16px;color:#369;">
+
+                                <!--  <input type="text" class="form-control get_amount" placeholder="" name="amount" id="amount" autocomplete="off" required> -->
+                                <select id="" name="amount"  class="form-control get_amount">
+                                    <option value="2000">2000</option>
+                                    <option value="3000">3000</option>
+                                    <option value="5000">5000</option>
+                                    <option value="10000">10000</option>
+                                    <option value="10000">20000</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <!-- <div class="form-group">
+                             <font id="select" color="#00FF00">1000</font> MAVROx6=<font id="pay" color="#FF0000">7000</font>
+                             人民币
+                         </div>-->
+                        <div class="form-group">
+                            <!--<h4>
+                                提供帮助必须是2000
+                            </h4>
+                        </div>-->
+
+                            <div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" class="i-checks" name="i-checks" checked="" required style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                            警告，我已完全了解所有风险。
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <!-- <button type="button" class="btn_next btn-warning btn-sm" data-dismiss="modal" data-toggle="modal" data-target="#myModal2">提供帮助</button>
+                             <input name="jhwjjc"  id="jhwjjc" type="submit" class="btn_next btn-warning btn-sm" value="提供帮助">-->
+
+                            <input name="jhwjjc"  id="jhwjjc" type="submit" class="btn_next btn-warning btn-sm" value="提供帮助" onClick="clickhere(this)">
+
+
+
+
+                        </div></form>
+            </div>
+        </div>
+    </div><div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title2">留言信息</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:300px; overflow:auto">
+                <iframe src='' id="mainframe12" width="830px;" height="350px;" ></iframe>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title">确认申请</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:300px;">
+                <p><strong><font color="#FF0000" id="amountpay"></font> RMB  : 人民币</strong></p>
+                <!--<p>增长率为每日1% RMB，最高30%  Mavro</p>-->
+                <p>注意：您的申请如果需要被取消，可以在配对单产生之前提交取消申请。一旦配对单产生了，该施善申请将无法被取消。</p>
+                <p><strong><font color="#FF0000">注意：请核实交易的资料，一旦完成申请，该交易是不能被取消或更改。</font></strong></p>
+
+            </div>
+            <div class="modal-footer">
+                <!--
+                  <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  -->
+                <button type="button" class="btnNext btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa20" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title3">确认申请</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:300px;">
+                <p><strong><font color="#FF0000" id="amountpay2"></font> RMB  : 人民币</strong></p>
+                <!--<p>增长率为每日1% Mavro，最高30%  Mavro</p>-->
+                <p>注意：您的申请如果需要被取消，可以在配对单产生之前提交取消申请。一旦配对单产生了，该施善申请将无法被取消。</p>
+                <p><strong><font color="#FF0000">注意：请核实交易的资料，一旦完成申请，该交易是不能被取消或更改。</font></strong></p>
+
+            </div>
+            <div class="modal-footer">
+                <!--
+                  <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  -->
+                <button type="button" class="btnNext btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa21" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title21">确认汇款</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:300px; overflow:auto">
+                <p><strong>Order: R2723351</strong></p>
+
+                <p>Member of the BOCAI has requested assistance in the amount of: <br>
+                    <span id="mavro" style="font-weight: bold"></span> MYR<br>
+                    <span id="rmb" style="font-weight: bold"></span> RMB
+
+                </p>
+
+                <p><strong>You have to provide help before <font id="expire_date2"></font>, according to bank details
+                    provided further:</strong></p>
+
+                <div style="border:1px solid #009">
+                    <p>Type in full beneficiary bank details below: </p>
+
+                    <p><strong>Beneficiary Bank: <font id="bank_name2"></font></strong></p>
+
+                    <p><strong>Beneficiary Name:<font id="bank_user2"></font></strong></p>
+
+                    <p><strong>Beneficiary Account No: <font id="bank_number2"></font></strong></p>
+
+                    <p><strong>SWIFT code/BIC:</strong></p>
+
+                    <p>Any additional information for sender: For fast confirmation, please sms to 0175027399 after
+                        transfer made.</p>
+
+                    <p>---------------------</p>
+
+                    <p><font color="#FF0000">WARNING!</font> While making transfers, please pay your attention to the
+                        purpose of the payment. Some banks require to specify the account number or the customers card
+                        during transfer process. This is due to the fact that the money goes first to a single
+                        correspondent account of the bank, and then distributed to clients accounts. In this case, you
+                        can not write private translation! Pay attention to the recommendations of the recipients!</p>
+                </div>
+                <p>After you receive assistance you need to confirm it by clicking appropriate button.</p>
+
+                <p>Never confirm payment before funds reception, as confirmation can not be reversed and the system will
+                    believe, that you have received funds.</p>
+
+                <p><font color="#FF0000">ATTENTION!!</font> Due to wishes of some banks we ask you not to mention about
+                    BOCAI in a payment purpose and use standart formulate.</p>
+
+                <p>At the request of some participants, which active use their own bank accounts for their personal
+                    purposes. We ask you to add to total amount two last numbers of your order to make your transfer
+                    identification more simple. For example for order R111111169 on transfer 3000 000 you can transfer
+                    3000 069 MYR. Thank you.</p>
+
+                <p><strong>Recepient:shukri025 0199816743 (******), phone: 0199816743045</strong></p>
+
+                <p><strong>Sender: Des CK 0175027399 (******), phone: 017502739</strong></p>
+
+                <p><font color="#FF0000">ATTENTION!!</font></p>
+
+                <p>1) SENDER HAS TO PROVIDE HELP IN THE AMOUNT ASSIGNED.
+
+                </p><p>IN CASE OF CASH TRANSFER, OR PERSONAL CARD USE (ONE, NOT LINKED TO THE SYSTEM) COMMISSIONS ARE PAID
+                BY SENDER; IN CASE OF TRANSFER MADE FORM A SYSTEM ACCOUNT, COMMISSIONS ARE PAID BY THE SYSTEM. YOU
+                WILL HAVE TO SHOW COMMISSIONS AMOUNT IN APPROPRIATE FIELD.</p>
+
+                <p>2) IN CASE ORDER WAS NOT COMPLETED ON 14-03-15 16:05:01, YOUR ACCOUNT WILL BE BLOCKED AND YOU WILL
+                    NOT BE ABLE TO USE THE SYSTEM. YOUR ORDER WOULD BE GIVEN (redirected) TO ANOTHER PARTICIPANT.</p>
+
+                <p>P.S. In case if the request came not for the full amount indicated in the application. Do not worry!
+                    Requests for remaining sum will be received within 10 days of the filing of your application.
+                    :-))</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn-next btn-warning btn-sm" data-dismiss="modal">确认</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa22" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title22">确认申请</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:300px;">
+                <p><strong><font color="#FF0000" id="amountpay22"></font> RMB  : 人民币</strong></p>
+                <!--<p>增长率为每日1% Mavro，最高30%  Mavro</p>-->
+                <p>注意：您的申请如果需要被取消，可以在配对单产生之前提交取消申请。一旦配对单产生了，该施善申请将无法被取消。</p>
+                <p><strong><font color="#FF0000">注意：请核实交易的资料，一旦完成申请，该交易是不能被取消或更改。</font></strong></p>
+
+            </div>
+            <div class="modal-footer">
+                <!--
+                  <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  -->
+                <button type="button" class="btn-primary" data-dismiss="modal">确认</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa23" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title23">请选择</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:400px; overflow:auto">
+                <iframe src='' id="mainframe188" width="830px;" height="350px;" ></iframe>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <!--
+                <button type="button" class="btn-primary" data-dismiss="modal" id="select_fanshi">确认</button>-->
+            </div>
+
+
+
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa24" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title24">请选择</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:400px; overflow:auto">
+                <iframe src='' id="mainframe13" width="830px;" height="350px;" ></iframe>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+                <!--<button type="button" class="btn-primary" data-dismiss="modal" id="select_fanshi2">确认</button> -->
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa25" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title25">请完成操作</h5>
+                <small class="font-bold"></small>
+            </div>
+            <form class="" method="post" id="pfrom" enctype="multipart/form-data" action="uploadify">
+                <div class="modal-body" style="height:300px;">
+
+                    <p>上传打款图片</p>
+                    <p><input type="file" name="file">
+                        <span style="color: red">
+                            图片限制大小为2M
+                        </span>
+                    </p>
+
+                    <p>留言</p>
+
+                    <input type="hidden" name="completid" id="completid">
+                    <input type="hidden" name="pro_status" id="pro_status">
+
+                    <textarea rows="4" class="form-control" name="content" style="width: 100%;"></textarea>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn-primary" id="select_fanshi3">确认</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa33" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title">通告</h5>
+                <small class="font-bold"></small>
+            </div>
+
+            <div class="modal-body" style="height:300px;">
+
+                <p>温馨提醒会员 ，为保证系统运行流畅 ，确保配对成功会员收付款及时到账 ，请不确定会员在配对成功前提前点击取消键 ，以免耽误收款会员的等待期 。接收帮助款的会员也请保持电话畅通 ，收到款后及时点确认键 。感谢所有会员的爱心互助。</p>
+
+
+                <br>
+                <br>
+
+                <p>系统启动</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-primary" data-dismiss="modal" id="next32">关闭</button>
+            </div>
+
+
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa36" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title">通告</h5>
+                <small class="font-bold"></small>
+            </div>
+
+            <div class="modal-body" style="height:auto;">
+
+                <p>各位会员大家好, </p>
+                <p>请在 4月24号 登录的时候重新设置交易密码。一旦设置了交易密码，就无法再次被修改，请把交易密码安全的记录下来,谢谢。</p>
+
+                <p>客服</p>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-primary" data-dismiss="modal" id="next35">下一条</button>
+            </div>
+
+
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa35" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title">消息提醒</h5>
+                <small class="font-bold"></small>
+            </div>
+
+            <div class="modal-body" style="height:auto;">
+
+                <p>您在4月11号过后所注册的会员必须重新输入，激活码已经发到你后台，对你造成的不便，向你表达歉意。</p>
+
+                <p>客服</p>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-primary" data-dismiss="modal" id="next34">关闭</button>
+            </div>
+
+
+        </div>
+    </div>
+</div><div class="modal fade" id="myModa31" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title31">确认取消</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:300px;">
+                <p>您确定要取消吗？</p>
+            </div>
+            <div class="modal-footer">
+                <!--
+                  <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                  -->
+                <button type="button" class="btn-primary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn-primary" id="yes_cancel" data-dismiss="modal">确认</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title">详细的订单信息</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:400px; overflow:auto">
+                <iframe src='' id="mainframe11" width="830px;" height="350px;" ></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="gethelpmodal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h4 class="modal-title">接受帮助</h4>
+
+                <p class="text-warning"></p>
+            </div>
+            <form method="post" action="/Home/Index/jsbzcl" id="get_help">
+                <div class="modal-body" style="text-align:center">
+                    <input type="hidden" value="" id="wallet_type" name="wallet_type">
+
+
+                    <br>
+                    <label class="col-sm-12 control-label">接受帮助支付方式</label>
+
+                    <div class="radio" align="left">
+
+                        <label> <input type="checkbox" value="1" class="ckbox2" name="zffs1" checked="">银行支付</label><br>
+                        <label> <input type="checkbox" value="1" class="ckbox2" name="zffs2" checked="">支付宝支付</label><br>
+                        <label> <input type="checkbox" value="1" class="ckbox2" name="zffs3" checked="">微信支付</label><br>
+                    </div>
+
+                    <div class="input-group m-b">
+                        <!--<span class="input-group-addon">可出售余额</span>-->
+                        <select id="gethelp_select" name="get_amount" class="input-group-addon" style="float: left;height: 34px;width: 50%">
+                            <option value="1" selected="selected">静态钱包</option>
+                            <option value="2">动态钱包</option>
+                            <!--  <option value="3">团队奖余额</option>
+                             <option value="4">诚意金余额</option> -->
+                        </select>
+                        <input id="gethelp_money" type="text" placeholder="" class="form-control" style="float: right;width: 50%" value="{$userData['ue_money']}RMB" readonly>
+                        <input name="moneytype" id="moneytype" type="hidden" placeholder="" class="form-control" style="float: right;width: 50%" value="1" readonly>
+                    </div>
+                    <script>
+                        $(function () {
+                            $("#gethelp_select").change(function () {
+
+                                console.log($("#gethelp_select").val());
+                                switch ($("#gethelp_select").val()){
+                                    case "1":
+                                        $("#gethelp_money").val("{$userData['ue_money']}RMB");
+                                        $("#moneytype").val("1");
+                                        break;
+                                    case "2":
+                                        $("#gethelp_money").val("{$userData['jl_he']}RMB");
+                                        $("#moneytype").val("2");
+                                        break;
+                                    case "3":
+                                        $("#gethelp_money").val("{$userData['jl_he']}RMB");
+                                        $("#moneytype").val("3");
+                                        break;
+                                    case "4":
+                                        $("#gethelp_money").val("{$userData['jl_he1']}RMB");
+                                        $("#moneytype").val("4");
+                                        break;
+                                }
+                            })
+                        })
+                    </script>
+
+
+                    <div class="form-group">
+                        <div class="input-group" style="width:100%;text-align:center;font-size:16px;color:#369;">
+                            <div class="col-sm-12">
+
+                                金额<input type="text" class="form-control get_amount" placeholder="<?php //echo $settings['supply_money_lower_limit']; ?><?php //echo $settings['supply_money_upper_limit']; ?>" name="get_amount" id="amount" autocomplete="off" required>
+
+                                <!-- added by skyrim -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<div class="form-group">
+                        <font id="gh_amount"></font> MAVROx7=<font id="gh"></font>
+                        人民币
+                    </div>-->
+                    <div class="form-group">
+                        <h4>
+                        </h4>
+                    </div>
+
+                    <div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" class="i-checks" name="i-checks" checked="" required style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                    警告，我已完全了解所有风险。
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <input name="jhwjjc"  id="jhwjjc" type="submit" class="btn_next btn-warning btn-sm" value="接受帮助">
+
+                </div></form>
+        </div>
+
+    </div>
+</div><div class="modal fade" id="get_help_comfirm" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="color-line"></div>
+            <div class="modal-header">
+                <h5 class="modal-title" id="title">确认申请</h5>
+                <small class="font-bold"></small>
+            </div>
+            <div class="modal-body" style="height:300px;">
+                <p><strong>您将会获得<font color="00FF00" id="amount_get"></font> RMB  : 人民币</strong></p>
+                <p></p>
+                <p>注意：您的申请如果需要被取消，可以在配对单产生之前提交取消申请。一旦配对单产生了，该申请将无法被取消。</p>
+                <p><strong><font color="#FF0000">注意：请核实交易的资料，一旦完成申请，该交易是不能被取消或更改。</font></strong></p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn_get_next btn-primary">确认</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(".two_nav").hide();
+$(".right_button h1").hide();
+$(".right_button h8").click(
+						function(){
+							$(".two_nav").show()
+						}
+					)
+$(".right_button h8").click(
+						function(){
+							$(".right_button h1").show()
+						}
+					)					
+$(".right_button h8").click(
+						function(){
+							$(".right_button h8").hide()
+						}
+					)
+
+
+$(".right_button h1").click(
+						function(){
+							$(".two_nav").hide()
+						}
+					)
+$(".right_button h1").click(
+						function(){
+							$(".right_button h8").show()
+						}
+					)						
+$(".right_button h1").click(
+						function(){
+							$(".right_button h1").hide()
+						}
+					)
+							
+							
+$(function(){
+		$(".bannerBox img").hide().eq(0).show()
+		$(".yuanBox span").removeClass(".yuanBox current").eq(0).addClass(".yuanBox current")
+		var n=0
+		function move(){
+		if(n<$(".bannerBox img").length-1){
+		n=n+1}
+		else{n=0}
+		
+		$(".bannerBox img").hide().eq(n).show()
+		$(".yuanBox span").removeClass(".yuanBox current").eq(n).addClass(".yuanBox current")
+		}
+		t=setInterval(move,1500)
+		$(".bannerBox").mouseenter(function(){
+		clearInterval(t)
+		}).mouseleave(function(){
+		t=setInterval(move,1500)
+				}
+		
+		)
+		$(".yuanBox span").mouseenter(
+		function(){
+			n=$(this).index()
+		$(".bannerBox img").hide().eq(n).show()
+		$(".bannerBox span").removeClass(".yuanBox current")
+		$(this).addClass(".yuanBox current")
+		clearInterval(ting)
+			
+			
+			}
+		
+		
+		
+		)
+	}
+
+		
+
+
+
+
+
+)
+
+
+
+$(".btngethelp").click(function(){
+    $(".balance").val($(this).data("cp"));
+    $(".sell").val($(this).data("cp"));
+    $(".get_amount").val("");
+    $("#wallet_type").val($(this).data("wallet_type"));
+    $("#gethelpmodal").modal("toggle");
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
